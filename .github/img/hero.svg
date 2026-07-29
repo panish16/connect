@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="65 110 350 60" width="100%" height="100%">
+  <style>
+    /* Keyframe to draw the block letters out line-by-line */
+    @keyframes write-print {
+      to { stroke-dashoffset: 0; }
+    }
+    /* Keyframe to slide the plug icon into place */
+    @keyframes plug-in {
+      0% { transform: translateX(-30px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    
+    .plug-icon { 
+      fill: none; 
+      stroke: #2563eb; 
+      stroke-width: 5; 
+      stroke-linecap: round; 
+      stroke-linejoin: round;
+      animation: plug-in 0.6s ease-out forwards;
+    }
+    
+    .print-text {
+      fill: none;
+      stroke: #3b82f6;
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 130;
+      stroke-dashoffset: 130;
+      animation: write-print 0.6s ease-in-out forwards;
+    }
+
+    /* Staggering the drawing effect letter by letter */
+    .letter-o  { animation-delay: 0.5s; }
+    .letter-n1 { animation-delay: 0.9s; stroke-dasharray: 160; stroke-dashoffset: 160; }
+    .letter-n2 { animation-delay: 1.3s; stroke-dasharray: 160; stroke-dashoffset: 160; }
+    .letter-e  { animation-delay: 1.7s; }
+    .letter-c  { animation-delay: 2.1s; }
+    .letter-t  { animation-delay: 2.4s; }
+
+    @media (prefers-color-scheme: dark) {
+      .plug-icon { stroke: #60a5fa; }
+      .print-text { stroke: #93c5fd; }
+    }
+  </style>
+
+  <g id="logo-group">
+    <path class="plug-icon" d="M 90 120 C 60 120, 60 160, 90 160 M 90 133 L 105 133 M 90 147 L 105 147" />
+    
+    <path class="print-text letter-o" d="M 140 120 A 20 20 0 1 1 139.9 120 Z" />
+    
+    <path class="print-text letter-n1" d="M 175 120 L 175 160 M 175 120 L 205 160 L 205 120" />
+    
+    <path class="print-text letter-n2" d="M 225 120 L 225 160 M 225 120 L 255 160 L 255 120" />
+    
+    <path class="print-text letter-e" d="M 300 120 L 275 120 L 275 160 L 300 160 M 275 140 L 295 140" />
+    
+    <path class="print-text letter-c" d="M 345 120 C 320 120, 320 160, 345 160" />
+    
+    <path class="print-text letter-t" d="M 360 120 L 400 120 M 380 120 L 380 160" />
+  </g>
+</svg>
