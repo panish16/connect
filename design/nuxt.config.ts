@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     ...(isStudioEnabled ? ['nuxt-studio'] : []),
     '@nuxt/ui',
-    '@nuxt/a11y'
+    '@nuxt/a11y',
+    '@nuxt/eslint'
   ],
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
@@ -85,6 +86,6 @@ export default defineNuxtConfig({
     }
   },
   icon: {
-    clientBundle: false
+    clientBundle: { scan: false }
   }
 })

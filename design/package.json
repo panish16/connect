@@ -2,6 +2,19 @@
   "name": "design",
   "private": true,
   "type": "module",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@sbc-connect/nuxt-auth",
+      "@sbc-connect/nuxt-base",
+      "@sbc-connect/nuxt-forms",
+      "@sbc-connect/nuxt-pay",
+      "better-sqlite3",
+      "esbuild",
+      "sharp",
+      "vue-demi"
+    ]
+  },
   "scripts": {
     "build": "nuxt build",
     "build:static": "STUDIO=false nuxt generate",
@@ -10,7 +23,23 @@
     "dev:studio": "STUDIO=true nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "test:e2e": "playwright test"
+    "typecheck": "nuxt typecheck",
+    "test:e2e": "playwright test",
+    "deploy:cloudrun": "bash scripts/deploy-cloudrun.sh",
+    "deploy:cloudrun:dev": "bash scripts/deploy-cloudrun.sh dev",
+    "deploy:cloudrun:test": "bash scripts/deploy-cloudrun.sh test",
+    "deploy:cloudrun:sandbox": "bash scripts/deploy-cloudrun.sh sandbox",
+    "deploy:cloudrun:prod": "bash scripts/deploy-cloudrun.sh prod",
+    "deploy:static": "bash scripts/deploy-static.sh",
+    "deploy:static:dev": "bash scripts/deploy-static.sh dev",
+    "deploy:static:test": "bash scripts/deploy-static.sh test",
+    "deploy:static:sandbox": "bash scripts/deploy-static.sh sandbox",
+    "deploy:static:prod": "bash scripts/deploy-static.sh prod",
+    "deploy:dev": "bash scripts/deploy-static.sh dev",
+    "deploy:test": "bash scripts/deploy-static.sh test",
+    "deploy:sandbox": "bash scripts/deploy-static.sh sandbox",
+    "deploy:prod": "bash scripts/deploy-static.sh prod",
+    "deploy": "bash scripts/deploy-static.sh dev"
   },
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
@@ -25,6 +54,12 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
-    "@playwright/test": "^1.61.1"
+    "@nuxt/eslint": "^1.17.0",
+    "@playwright/test": "^1.61.1",
+    "@types/luxon": "^3.7.4",
+    "@types/node": "^26.2.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.5"
   }
 }

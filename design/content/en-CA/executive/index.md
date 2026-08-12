@@ -1,6 +1,22 @@
 ---
-title: Executive Overview
-description: Welcome to the executive overview for the Connected Services BC (CSBC) Connect Platform.
+title: "Connect Services Platform"
+hero:
+  badge: "CSBC CONNECT SERVICES PLATFORM"
+  headline: "Deliver Compliant, Scale-Ready Public Services in Months—Not Years."
+  description: "Connect provides BC Government teams with turn-key infrastructure, pre-built business capabilities, and automated compliance—eliminating redundant builds and reducing delivery risk across provincial services."
+  primaryCta:
+    label: "Explore Shared Capabilities"
+    to: "#capabilities"
+  secondaryCta:
+    label: "Schedule an Executive Briefing"
+    to: "#briefing"
+metrics:
+  - value: "60% Faster"
+    label: "Average Delivery Schedule Reduction for New Services"
+  - value: "100% Compliant"
+    label: "Built-in Accessibility (WCAG 2.1 AA) & BC Design Standards"
+  - value: "Enterprise-Grade"
+    label: "High-Availability Payments, Entity & Identity Services"
 ---
 This portal details the strategic advantages, corporate compliance frameworks, financial structures, and cross-ministry integrations designed for Ministry Directors, Policy Makers, and Business Leaders looking to modernize public service delivery.
 
@@ -26,11 +42,11 @@ Every integrated application benefits out of the box from institutional operatio
 ## 2. Ecosystem Integrations & The Connected Journey
 
 ### Connecting the Journey: An Integrated Ecosystem
-The Connect Platform maps citizen and business interactions to broad, real-world **High-Level Key Business Events** rather than isolated database rows. This architectural layout intentionally unifies three major public service sectors:
+The Connect Platform maps citizen and business interactions to broad, real-world **High-Level Key Business Events** rather than isolated database rows. This architectural layout intentionally unifies major public service sectors:
 
-| 💼 Business Management, Search & Asset Tracking | ⚖️ Compliance, Legal & Court Services | 🌲 Property, Land, Environmental & Heritage |
+| 💼 Business Management, Search & Asset Tracking | ⚖️ Legal Services | 🌲 Land, Environmental & Heritage |
 | :--- | :--- | :--- |
-| • BC Business Registration<br>• BC Corporations, Cooperatives & Societies<br>• Personal Property Lien Searches & Registries | • Court Registry Services<br> • Wills Registry<br> • Heritage Conservation Act Permits | • Rural Property Tax Services<br>• Short-Term Rental Registry<br>• Site Registry (Environmental)<br>• Historical Sites |
+| • BC Business Registration<br>• BC Corporations, Cooperatives & Societies<br>• Personal Property Lien Searches & Registries | • Court Registry Services<br> • Wills Registry  | • Rural Property Tax Services<br>• Short-Term Rental Registry<br>• Site Registry (Environmental)<br>• Historical Sites<br> • Heritage Conservation Act Permits |
 
 ### The Ecosystem in Action
 On the common digital platform, a person establishing a new commercial venture can simultaneously verify if a lien exists on a specialized piece of machinery, register their corporate structure, and secure a federal Business Number from the Canada Revenue Agency (CRA). That single business account profile seamlessly grants access to required accounts with other provincial partners and ministries, eliminating the need to re-authenticate or re-type the exact same core information.
