@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 370" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="pay-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="pay-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .pay-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .pay-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .pay-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .pay-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .pay-card { fill: #1e293b; stroke: #334155; }
+        .pay-title { fill: #f8fafc; }
+        .pay-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .pay-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="920" height="370" rx="16" fill="url(#pay-bg-gradient)"/>
+  <rect width="918" height="368" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="660" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#10b981"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">CONNECT PAY: MULTI-SEGMENT SKU CATALOG, TREASURY RAILS &amp; CAS RECONCILIATION</text>
+  </g>
+
+  <!-- Left Column: SKU & Ingestion -->
+  <g transform="translate(26, 48)">
+    <rect class="pay-card" width="245" height="308"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- Tag / Price icon -->
+    <path d="M 17 22 L 25 14 L 33 14 L 33 22 L 25 30 L 17 22 Z M 29 18 A 1.5 1.5 0 1 1 29 17.9" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+    <text class="pay-title" x="46" y="22">Fee Catalog &amp; SKUs</text>
+    <text class="pay-sub" x="46" y="34">Multi-Segment Pricing Matrix</text>
+
+    <line x1="12" y1="44" x2="233" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- SKU 1: Multi-Segment Pricing -->
+    <g transform="translate(10, 50)">
+      <rect class="pay-pill" width="225" height="58"/>
+      <rect x="8" y="8" width="6" height="42" rx="3" fill="#0284c7"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">Multi-Segment Pricing</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Public, Gov't, Municipal, MOU</text>
+      <text x="20" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Waived fees &amp; staff fee overrides</text>
+      <text x="20" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#0284c7">Segmented per SKU &amp; Partner Code</text>
+    </g>
+
+    <!-- SKU 2: Dynamic Fee Calculation -->
+    <g transform="translate(10, 114)">
+      <rect class="pay-pill" width="225" height="58"/>
+      <rect x="8" y="8" width="6" height="42" rx="3" fill="#10b981"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#047857">Dynamic Line-Item Engine</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Statutory base filing fees</text>
+      <text x="20" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Priority ($100) &amp; future effective</text>
+      <text x="20" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#059669">Service fee ($1.50) + GST / PST</text>
+    </g>
+
+    <!-- SKU 3: Product Ingestion -->
+    <g transform="translate(10, 178)">
+      <rect class="pay-pill" width="225" height="60"/>
+      <rect x="8" y="8" width="6" height="44" rx="3" fill="#8b5cf6"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6d28d9">Omnichannel Ingress</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• REST API (POST /payment-requests)</text>
+      <text x="20" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Frontline FAS / Service BC Counters</text>
+      <text x="20" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#7c3aed">Business, MHR, STRR, PPR, Names</text>
+    </g>
+
+    <!-- Bottom Tag -->
+    <g transform="translate(10, 246)">
+      <rect width="225" height="50" rx="6" fill="#f1f5f9"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#334155">⚡ @sbc-connect/nuxt-pay</text>
+      <text x="10" y="31" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#64748b">Interactive &lt;ConnectFeeWidget /&gt;</text>
+      <text x="10" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#64748b">and turnkey checkout page layouts</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: SKU -> Pay Engine -->
+  <path d="M 271 200 L 305 200" class="edge-solid"/>
+  <g transform="translate(268, 180)">
+    <rect class="tag-bg" width="40" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="18" y="4" text-anchor="middle">invoice</text>
+  </g>
+
+  <!-- Center Card: Pay Core Engine -->
+  <g transform="translate(305, 48)">
+    <rect width="295" height="308" rx="12" fill="#003366" filter="url(#pay-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="271" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#10b981"/>
+    <!-- Currency / Card icon -->
+    <path d="M 20 22 L 36 22 L 36 32 L 20 32 Z M 20 25 L 36 25" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Connect Pay Platform</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Cloud Run in northamerica-northeast1</text>
+
+    <!-- Block 1: Invoice & AR Lifecycle -->
+    <g transform="translate(12, 50)">
+      <rect width="271" height="74" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">🧾 INVOICE &amp; ACCOUNTS RECEIVABLE</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Line items, credit memos &amp; refunds</text>
+      <text x="10" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• PDF receipt &amp; statement generation</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Account transaction query engine</text>
+      <text x="10" y="69" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#a7f3d0">State: CREATED ➔ PAID ➔ RECONCILED</text>
+    </g>
+
+    <!-- Block 2: Treasury Rail Dispatcher -->
+    <g transform="translate(12, 130)">
+      <rect width="271" height="78" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">🏛️ PROVINCIAL TREASURY GATEWAY</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Direct Pay / PayBC credit card redirection</text>
+      <text x="10" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Pre-Authorized Debit (PAD) batching</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• BC OnLine deposit account drawdowns</text>
+      <text x="10" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#fed7aa">EFT, Online Banking &amp; Journal Vouchers</text>
+    </g>
+
+    <!-- Block 3: Accounting & CAS Sync -->
+    <g transform="translate(12, 214)">
+      <rect width="271" height="82" rx="6" fill="#047857"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">📊 CAS GL RECONCILIATION &amp; AUDIT</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Nightly bank file poller &amp; reconciliation</text>
+      <text x="10" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• General Ledger coding (Client-Resp-STOB)</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Multi-ministry revenue disbursement</text>
+      <text x="10" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Office of the Comptroller General compliance</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Pay Engine -> Rails & Accounting -->
+  <path d="M 600 200 L 640 200" class="edge-solid"/>
+  <g transform="translate(601, 180)">
+    <rect class="tag-bg" width="40" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="18" y="4" text-anchor="middle">settle</text>
+  </g>
+
+  <!-- Right Column: Treasury Rails & CAS -->
+  <g transform="translate(640, 48)">
+    <rect class="pay-card" width="255" height="308"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#f0fdf4"/>
+    <!-- Bank / Landmark icon -->
+    <path d="M 16 20 L 26 14 L 36 20 L 16 20 Z M 18 20 L 18 29 M 23 20 L 23 29 M 29 20 L 29 29 M 34 20 L 34 29 M 15 29 L 37 29" stroke="#16a34a" stroke-width="1.6" fill="none"/>
+    <text class="pay-title" x="46" y="22">Treasury Rails &amp; CAS</text>
+    <text class="pay-sub" x="46" y="34">Settlement &amp; Disbursements</text>
+
+    <line x1="12" y1="44" x2="243" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Rail 1: Consumer / Business Rails -->
+    <g transform="translate(10, 50)">
+      <rect width="235" height="68" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#166534">💳 Payment Rails Supported</text>
+      <text x="10" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Credit Card / Direct Pay (PayBC)</text>
+      <text x="10" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Pre-Authorized Debit (PAD) with cooling-off</text>
+      <text x="10" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• BC OnLine (BCOL) deposit accounts</text>
+      <text x="10" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">EFT, Wires &amp; Online Banking Payees</text>
+    </g>
+
+    <!-- Rail 2: Inter-Gov JV Transfers -->
+    <g transform="translate(10, 124)">
+      <rect width="235" height="68" rx="8" fill="#eff6ff" stroke="#dbeafe" stroke-width="1.2"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#1e40af">📑 Inter-Ministry Transfers</text>
+      <text x="10" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Journal Vouchers (JV) in CAS</text>
+      <text x="10" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Client-Resp-ServiceLine-STOB coding</text>
+      <text x="10" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Zero credit card merchant transaction fees</text>
+      <text x="10" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#2563eb">Internal government account routing</text>
+    </g>
+
+    <!-- Rail 3: CAS & Disbursements -->
+    <g transform="translate(10, 198)">
+      <rect width="235" height="98" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1.2"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#92400e">🏛️ CAS &amp; Fund Disbursement</text>
+      <text x="10" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Automated daily GL ledger feeds</text>
+      <text x="10" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Partner ministry revenue allocations</text>
+      <text x="10" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Municipal short-term rental MRDT splits</text>
+      <text x="10" y="66" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Trust account reconciliation &amp; AP refunds</text>
+      <text x="10" y="79" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#d97706">100% Financial Administration Act compliance</text>
+    </g>
+  </g>
+</svg>

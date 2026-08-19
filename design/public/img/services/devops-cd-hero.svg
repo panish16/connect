@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="cd-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="cd-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .cd-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .cd-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .cd-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-dashed { stroke: #0284c7; stroke-width: 1.8; stroke-dasharray: 4 4; }
+      .tag-bg { rx: 4; fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #166534; }
+      .cd-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .cd-card { fill: #1e293b; stroke: #334155; }
+        .cd-title { fill: #f8fafc; }
+        .cd-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #60a5fa; }
+        .edge-dashed { stroke: #38bdf8; }
+        .tag-bg { fill: #064e3b; stroke: #059669; }
+        .edge-tag { fill: #a7f3d0; }
+        .cd-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#cd-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="520" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#0284c7"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">COMMON DEVOPS CD PIPELINES (1PASSWORD.CA ➔ GCP BUILD ➔ CLOUD RUN / FIREBASE)</text>
+  </g>
+
+  <!-- Left Column: Reusable Workflows (bcgov/bcros-common) -->
+  <g transform="translate(30, 48)">
+    <rect class="cd-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- GitHub / Actions Icon -->
+    <path d="M 22 24 L 26 28 L 34 18 M 18 16 L 34 16 L 34 32 L 18 32 Z" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+    <text class="cd-title" x="46" y="22">Shared Workflows</text>
+    <text class="cd-sub" x="46" y="34">bcgov/bcros-common</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Reusable Component 1: Centralized GHA -->
+    <g transform="translate(10, 50)">
+      <rect class="cd-pill" width="220" height="58"/>
+      <rect x="8" y="8" width="6" height="42" rx="3" fill="#2563eb"/>
+      <text x="20" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#1d4ed8">📦 Reusable GitHub Actions</text>
+      <text x="20" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Single source of truth for build,</text>
+      <text x="20" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">test, lint &amp; deployment workflows</text>
+    </g>
+
+    <!-- Reusable Component 2: 1Password.ca Secrets -->
+    <g transform="translate(10, 116)">
+      <rect class="cd-pill" width="220" height="72"/>
+      <rect x="8" y="8" width="6" height="56" rx="3" fill="#0284c7"/>
+      <text x="20" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">🔒 1Password.ca Secrets</text>
+      <text x="20" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Canadian company &amp; data residency</text>
+      <text x="20" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Centralized vaults for API keys &amp; DB</text>
+      <text x="20" y="59" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#0284c7">Auto-injected via 1Password CLI</text>
+    </g>
+
+    <!-- Reusable Component 3: Workload Identity -->
+    <g transform="translate(10, 196)">
+      <rect class="cd-pill" width="220" height="58"/>
+      <rect x="8" y="8" width="6" height="42" rx="3" fill="#10b981"/>
+      <text x="20" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#047857">🔐 Keyless WIF &amp; Gates</text>
+      <text x="20" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Workload Identity Federation</text>
+      <text x="20" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#059669">dev ➔ test ➔ prod promotions</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: GitHub Actions -> GCP Cloud Build -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">trigger</text>
+  </g>
+
+  <!-- Center Card: Google Cloud Build Engine -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#cd-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#38bdf8"/>
+    <!-- Build Hammer/Gear icon -->
+    <path d="M 24 28 L 32 20 M 29 20 L 32 23 M 24 25 L 27 28" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Google Cloud Build</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Regional northamerica-northeast1</text>
+
+    <!-- Block 1: Minimal Secure Base Images -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="68" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">🛡️ MINIMAL SECURE BASE IMAGES</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Non-UI services use minimal Google images</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Zero shells, no package manager bloat</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Shrinks CVE attack surface to minimum</text>
+    </g>
+
+    <!-- Block 2: Artifact Registry & Caching -->
+    <g transform="translate(12, 124)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">🐳 ARTIFACT REGISTRY &amp; SCAN</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Automated container vulnerability scanning</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Immutable SHA256 image digest pinning</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Fast multi-layer caching</text>
+    </g>
+
+    <!-- Block 3: Target Dispatcher -->
+    <g transform="translate(12, 194)">
+      <rect width="246" height="72" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">🚀 DEPLOYMENT DISPATCHER</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Automated rollout health checks</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Deterministic target routing</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#fde047">Zero-downtime atomic switches</text>
+    </g>
+  </g>
+
+  <!-- Arrow Top: Cloud Build -> Firebase -->
+  <path d="M 585 130 L 635 110" class="edge-solid"/>
+  <g transform="translate(595, 105)">
+    <rect class="tag-bg" width="38" height="16" x="-2" y="-8"/>
+    <text class="edge-tag" x="17" y="3" text-anchor="middle">deploy</text>
+  </g>
+
+  <!-- Arrow Bottom: Cloud Build -> Cloud Run -->
+  <path d="M 585 240 L 635 255" class="edge-solid"/>
+  <g transform="translate(595, 245)">
+    <rect class="tag-bg" width="38" height="16" x="-2" y="-8"/>
+    <text class="edge-tag" x="17" y="3" text-anchor="middle">deploy</text>
+  </g>
+
+  <!-- Right Column: Dual Common Deployment Targets -->
+  <g transform="translate(635, 48)">
+    <rect class="cd-card" width="215" height="278"/>
+    <text class="cd-title" x="14" y="24">Common Targets</text>
+    <text class="cd-sub" x="14" y="36">Standard Ministry Platforms</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Target 1: Firebase Hosting & App Hosting -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="100" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1.2"/>
+      <circle cx="20" cy="20" r="10" fill="#f59e0b"/>
+      <!-- Flame icon -->
+      <path d="M 20 14 C 18 17 16 19 16 22 C 16 24.2 17.8 26 20 26 C 22.2 26 24 24.2 24 22 C 24 19 22 17 20 14 Z" fill="#ffffff"/>
+      <text x="36" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#92400e">Firebase Hosting</text>
+      <text x="36" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#b45309">Frontends &amp; Nuxt Apps</text>
+      
+      <text x="10" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• PR Preview Channels</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Fast Global Edge CDN</text>
+      <text x="10" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Nuxt SSR / Static hydration</text>
+      <text x="10" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#d97706">Ideal for Web Client UIs</text>
+    </g>
+
+    <!-- Target 2: Google Cloud Run -->
+    <g transform="translate(10, 162)">
+      <rect width="195" height="106" rx="8" fill="#f0f9ff" stroke="#e0f2fe" stroke-width="1.2"/>
+      <circle cx="20" cy="20" r="10" fill="#0284c7"/>
+      <!-- Cloud container icon -->
+      <path d="M 16 22 L 20 18 L 24 22 M 20 18 L 20 26" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+      <text x="36" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#075985">Google Cloud Run</text>
+      <text x="36" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#0369a1">APIs &amp; Microservices</text>
+      
+      <text x="10" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#0c4a6e">• Auto-scaling 0 ➔ N pods</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#0c4a6e">• Blue/Green revision traffic</text>
+      <text x="10" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#0c4a6e">• Minimal distroless base</text>
+      <text x="10" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#0284c7">Node, Python, Go, Java</text>
+      <text x="10" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#059669">Zero-Downtime Releases</text>
+    </g>
+  </g>
+</svg>

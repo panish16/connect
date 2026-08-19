@@ -1,0 +1,14 @@
+[extend]
+# Extends the default Gitleaks configuration rules
+
+[allowlist]
+description = "Global allowlist for documentation placeholders and content examples"
+paths = [
+  '''design/content/.*'''
+]
+stopwords = [
+  "YOUR_API_KEY",
+  "YOUR_ACCESS_TOKEN",
+  "<YOUR_API_KEY>",
+  "YOUR_CLIENT_SECRET"
+]

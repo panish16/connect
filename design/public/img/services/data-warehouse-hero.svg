@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="dw-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="dw-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .dw-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .dw-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .dw-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-dashed { stroke: #0284c7; stroke-width: 1.8; stroke-dasharray: 4 4; }
+      .tag-bg { rx: 4; fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #166534; }
+      .src-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .dw-card { fill: #1e293b; stroke: #334155; }
+        .dw-title { fill: #f8fafc; }
+        .dw-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #60a5fa; }
+        .edge-dashed { stroke: #38bdf8; }
+        .tag-bg { fill: #064e3b; stroke: #059669; }
+        .edge-tag { fill: #a7f3d0; }
+        .src-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#dw-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="430" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#0284c7"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">CONNECT DATA WAREHOUSE &amp; RECONCILIATION ENGINE</text>
+  </g>
+
+  <!-- Left Column: Data Ingress Sources -->
+  <g transform="translate(30, 48)">
+    <rect class="dw-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#e0f2fe"/>
+    <!-- DB/Data Ingest Icon -->
+    <path d="M 18 20 C 18 17 34 17 34 20 C 34 23 18 23 18 20 Z M 18 24 C 18 27 34 27 34 24 M 18 28 C 18 31 34 31 34 28" stroke="#0284c7" stroke-width="1.6" fill="none"/>
+    <text class="dw-title" x="46" y="22">Data Ingress Sources</text>
+    <text class="dw-sub" x="46" y="34">Platform &amp; Financial Streams</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Source 1: Platform Transactions -->
+    <g transform="translate(10, 52)">
+      <rect class="src-pill" width="220" height="60"/>
+      <rect x="8" y="8" width="6" height="44" rx="3" fill="#003366"/>
+      <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#003366">💳 Platform Transactions</text>
+      <text x="20" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Connect Pay invoices, receipts,</text>
+      <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">filing payments, PAD &amp; CC draws</text>
+    </g>
+
+    <!-- Source 2: CAS (Corporate Accounting System) -->
+    <g transform="translate(10, 122)">
+      <rect class="src-pill" width="220" height="60"/>
+      <rect x="8" y="8" width="6" height="44" rx="3" fill="#10b981"/>
+      <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#047857">🏛️ CAS Financial Feeds</text>
+      <text x="20" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Corporate Accounting System</text>
+      <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">General Ledger &amp; Bank Clearances</text>
+    </g>
+
+    <!-- Source 3: Partner Data Feeds -->
+    <g transform="translate(10, 192)">
+      <rect class="src-pill" width="220" height="62"/>
+      <rect x="8" y="8" width="6" height="46" rx="3" fill="#d97706"/>
+      <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#b45309">🤝 Partner Data Feeds</text>
+      <text x="20" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Cross-ministry datasets &amp; files</text>
+      <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#0284c7">Managed by Apache Airflow DAGs</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Sources -> Pipelines & Governance Engine -->
+  <path d="M 270 185 L 320 185" class="edge-solid"/>
+  <g transform="translate(275, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">ingest</text>
+  </g>
+
+  <!-- Center Card: Pipelines, Anonymization & Reconciliation Engine -->
+  <g transform="translate(320, 48)">
+    <rect width="280" height="278" rx="12" fill="#003366" filter="url(#dw-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="256" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#38bdf8"/>
+    <!-- Cog / Pipeline icon -->
+    <path d="M 28 22 L 28 32 M 23 27 L 33 27" stroke="#002244" stroke-width="2"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Pipeline &amp; Privacy Engine</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Airflow DAGs • Anonymization • Reconcile</text>
+
+    <!-- Block 1: Apache Airflow Scheduling -->
+    <g transform="translate(12, 50)">
+      <rect width="256" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#67e8f9">🌪️ APACHE AIRFLOW ORCHESTRATION</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Automated DAG workflows &amp; scheduled syncs</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Partner data ingestion with automated retries</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Batch &amp; Incremental Delta Loading</text>
+    </g>
+
+    <!-- Block 2: postgresql_anonymizer -->
+    <g transform="translate(12, 120)">
+      <rect width="256" height="74" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#fde047">🛡️ POSTGRESQL_ANONYMIZER (PII SCREENING)</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Dynamic &amp; static PII data masking</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Partner-provided privacy rules reviewed by SRE</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">FOIPPA &amp; Provincial Privacy Compliance</text>
+    </g>
+
+    <!-- Block 3: Level 1 CAS Financial Reconciliation -->
+    <g transform="translate(12, 200)">
+      <rect width="256" height="66" rx="6" fill="#064e3b"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6ee7b7">⚖️ LEVEL 1 FINANCIAL RECONCILIATION</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#d1fae5">• Connect Pay vs CAS Ledger matching</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#d1fae5">• Real-time clearance verification &amp; discrepancy alerts</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Settled / In-Flight / Exception status</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Engine -> Reconciled Warehouse & Analytics -->
+  <path d="M 600 185 L 650 185" class="edge-solid"/>
+  <g transform="translate(605, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">publish</text>
+  </g>
+
+  <!-- Right Column: Reconciled Warehouse & Analytics -->
+  <g transform="translate(650, 48)">
+    <rect class="dw-card" width="200" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#fef3c7"/>
+    <!-- Analytics Icon -->
+    <path d="M 18 32 L 18 26 M 24 32 L 24 20 M 30 32 L 30 16 M 36 32 L 36 22" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/>
+    <text class="dw-title" x="46" y="22">Reconciled Marts</text>
+    <text class="dw-sub" x="46" y="34">Audited Analytics</text>
+
+    <line x1="12" y1="44" x2="188" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Mart 1: Financial Reconciliation Mart -->
+    <g transform="translate(10, 52)">
+      <rect width="180" height="60" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">📊 Financial Audit Mart</text>
+      <text x="8" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Audited CAS transactions &amp; fees,</text>
+      <text x="8" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">revenue sharing &amp; GL settlements</text>
+      <text x="8" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#15803d">100% Reconciled Clearances</text>
+    </g>
+
+    <!-- Mart 2: Anonymized Analytics Mart -->
+    <g transform="translate(10, 122)">
+      <rect width="180" height="60" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">🔒 Anonymized Datasets</text>
+      <text x="8" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Sanitized partner &amp; filing data</text>
+      <text x="8" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">safe for public/partner queries</text>
+      <text x="8" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#0284c7">Zero PII Leakage Guarantee</text>
+    </g>
+
+    <!-- Mart 3: BI Dashboards & Consumption -->
+    <g transform="translate(10, 192)">
+      <rect width="180" height="62" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">📈 Reporting &amp; BI Tools</text>
+      <text x="8" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Metabase, PowerBI, BigQuery,</text>
+      <text x="8" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">and automated executive exports</text>
+      <text x="8" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#b45309">Executive &amp; Operational Insights</text>
+    </g>
+  </g>
+</svg>

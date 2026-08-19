@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="store-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="store-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .store-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .store-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .store-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .store-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .store-card { fill: #1e293b; stroke: #334155; }
+        .store-title { fill: #f8fafc; }
+        .store-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .store-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#store-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="570" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#059669"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">DOCUMENT STORAGE: VIRTUAL FILESYSTEM &amp; SCHEMA.ORG/DIGITALDOCUMENT</text>
+  </g>
+
+  <!-- Left Column: Partner Products -->
+  <g transform="translate(30, 48)">
+    <rect class="store-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- Folder icon -->
+    <path d="M 17 17 L 23 17 L 26 20 L 33 20 L 33 31 L 17 31 Z" stroke="#2563eb" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text class="store-title" x="46" y="22">Partner Products</text>
+    <text class="store-sub" x="46" y="34">Scoped Product Namespaces</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Product 1: BUSINESS & STRR -->
+    <g transform="translate(10, 50)">
+      <rect class="store-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#0284c7"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">BUSINESS &amp; STRR Registries</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Corporations &amp; Cooperatives (CORP, COOP)</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Short-Term Rental compliance filings</text>
+    </g>
+
+    <!-- Product 2: MHR & PPR -->
+    <g transform="translate(10, 108)">
+      <rect class="store-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#059669"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#047857">MHR &amp; PPR Registries</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Manufactured home title registrations</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Personal property financing statements</text>
+    </g>
+
+    <!-- Product 3: Scanning & Internal Documents -->
+    <g transform="translate(10, 166)">
+      <rect class="store-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#7c3aed"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6d28d9">Staff Scanning &amp; Batches</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Accession batches, boxes &amp; schedules</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Archival microfiche &amp; paper digitizations</text>
+    </g>
+
+    <!-- Input 4: Standard Ingestion Tag -->
+    <g transform="translate(10, 224)">
+      <rect width="220" height="30" rx="6" fill="#f1f5f9"/>
+      <text x="12" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#334155">⚡ Apigee DocServiceProxy Mediation</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Products -> Storage Engine -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">store</text>
+  </g>
+
+  <!-- Center Card: Virtual Filesystem Engine & Cloud Storage -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#store-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#10b981"/>
+    <!-- Cloud Storage / Database icon -->
+    <path d="M 22 22 C 22 19 34 19 34 22 C 34 25 22 25 22 22 Z M 22 25 C 22 28 34 28 34 25 M 22 28 C 22 31 34 31 34 28" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Document Storage API</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Virtual Filesystem &amp; Metadata Engine</text>
+
+    <!-- Block 1: Virtual Filesystem Tree -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="66" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">🗂️ VIRTUAL FILESYSTEM HIERARCHY</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff">/{product}/{class}/{type}/{entityId}/{docId}</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Strict multi-tenant logical partitioning</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Eliminates unstructured flat bucket sprawl</text>
+    </g>
+
+    <!-- Block 2: Schema.org Compliance -->
+    <g transform="translate(12, 122)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">📜 SCHEMA.ORG / DIGITALDOCUMENT</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Standard JSON-LD metadata envelopes</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• name, author, datePublished, fileFormat</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Interoperable open data semantics</text>
+    </g>
+
+    <!-- Block 3: Cloud Storage Backend -->
+    <g transform="translate(12, 192)">
+      <rect width="246" height="74" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">☁️ GOOGLE CLOUD STORAGE (MONTREAL)</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• AES-256 encryption at rest + CMEK</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Short-lived signed URLs for fast streaming</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">11 9's durability &amp; immutable versioning</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Storage Engine -> Verified Documents -->
+  <path d="M 585 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(588, 165)">
+    <rect class="tag-bg" width="44" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="20" y="4" text-anchor="middle">retrieve</text>
+  </g>
+
+  <!-- Right Column: Document Vault Deliverables -->
+  <g transform="translate(635, 48)">
+    <rect class="store-card" width="215" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#f0fdf4"/>
+    <!-- Verified Vault icon -->
+    <path d="M 20 18 L 32 18 L 32 30 L 20 30 Z M 26 22 L 26 26 M 24 24 L 28 24" stroke="#16a34a" stroke-width="1.6" fill="none"/>
+    <text class="store-title" x="46" y="22">Document Vault</text>
+    <text class="store-sub" x="46" y="34">Search &amp; Verification</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Output Card 1: Fast Retrieval -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="96" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">⚡ Fast Lookup &amp; Reports</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Immediate docServiceId retrieval</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Entity filing history &amp; event reports</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Multi-parameter metadata search</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">Sub-50ms metadata query latency</text>
+    </g>
+
+    <!-- Output Card 2: Tamper-Proof Audit -->
+    <g transform="translate(10, 156)">
+      <rect width="195" height="110" rx="8" fill="#eff6ff" stroke="#dbeafe" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#1e40af">🛡️ Tamper-Proof Audit</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Consumer doc verification endpoint</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Immutable record audit trails</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Scanning batch accession history</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#2563eb">Legal evidentiary compliance</text>
+      <text x="10" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#1e40af">Zero cross-tenant data leaks</text>
+    </g>
+  </g>
+</svg>

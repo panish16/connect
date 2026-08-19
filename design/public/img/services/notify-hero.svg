@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="notify-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#003366" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="notify-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .not-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .not-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .not-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .not-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .not-card { fill: #1e293b; stroke: #334155; }
+        .not-title { fill: #f8fafc; }
+        .not-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .not-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#notify-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="570" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#f59e0b"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">NOTIFY SERVICE: ASYNC PUBSUB, MULTI-PROVIDER EMAIL &amp; MAILHOG TESTING</text>
+  </g>
+
+  <!-- Left Column: Trigger Sources -->
+  <g transform="translate(30, 48)">
+    <rect class="not-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- Bell / Message icon -->
+    <path d="M 26 14 C 23 14 20 17 20 21 L 20 26 L 17 28 L 35 28 L 32 26 L 32 21 C 32 17 29 14 26 14 Z M 24 29 C 24 30.5 25 31.5 26 31.5 C 27 31.5 28 30.5 28 29" stroke="#2563eb" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text class="not-title" x="46" y="22">Triggers &amp; Events</text>
+    <text class="not-sub" x="46" y="34">Synchronous &amp; Async PubSub</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Trigger 1: PubSub Events -->
+    <g transform="translate(10, 50)">
+      <rect class="not-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#0284c7"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">Cloud Pub/Sub Events</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Filing completions &amp; approvals</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Payment receipts &amp; refund notices</text>
+    </g>
+
+    <!-- Trigger 2: Direct REST API -->
+    <g transform="translate(10, 108)">
+      <rect class="not-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#10b981"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#047857">Synchronous REST API</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• POST /notify/api/v1/notifications</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Password reset &amp; magic links</text>
+    </g>
+
+    <!-- Trigger 3: Document Attachments -->
+    <g transform="translate(10, 166)">
+      <rect class="not-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#8b5cf6"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6d28d9">Dynamic Attachments</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Bundles PDFs from Doc Creation</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Invoices from Document Storage</text>
+    </g>
+
+    <!-- Input 4: Standard Ingestion Tag -->
+    <g transform="translate(10, 224)">
+      <rect width="220" height="30" rx="6" fill="#f1f5f9"/>
+      <text x="12" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#334155">⚡ Managed Ingress via Apigee Gateway</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Triggers -> Notify Engine -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">queue</text>
+  </g>
+
+  <!-- Center Card: Notify Core Engine -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#notify-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#f59e0b"/>
+    <!-- Mail envelope icon -->
+    <path d="M 20 22 L 28 27 L 36 22 M 20 22 L 20 31 L 36 31 L 36 22 Z" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Notify Platform Service</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">PubSub Workers on Google Cloud Run</text>
+
+    <!-- Block 1: Multi-Provider Routing -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="66" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">🔀 MULTI-PROVIDER ORCHESTRATION</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• GC Notify (Federal Government)</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• BC Gov Corporate SMTP Relay</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Automatic failover &amp; provider fallback</text>
+    </g>
+
+    <!-- Block 2: Mailhog Sandbox in Dev -->
+    <g transform="translate(12, 122)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">🐗 MAILHOG ZERO-RISK DEV SANDBOX</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Intercepts all dev/test emails locally</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Visual web UI to verify HTML &amp; links</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Zero risk of spamming real citizens</text>
+    </g>
+
+    <!-- Block 3: PubSub Resiliency -->
+    <g transform="translate(12, 192)">
+      <rect width="246" height="74" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">🛡️ ASYNC RESILIENCY &amp; RETRIES</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Guaranteed at-least-once delivery</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Exponential backoff &amp; Dead-Letter Queue</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Non-blocking background delivery</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Notify Engine -> Delivery -->
+  <path d="M 585 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(588, 165)">
+    <rect class="tag-bg" width="44" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="20" y="4" text-anchor="middle">dispatch</text>
+  </g>
+
+  <!-- Right Column: Delivery Environments -->
+  <g transform="translate(635, 48)">
+    <rect class="not-card" width="215" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#f0fdf4"/>
+    <!-- Send / Plane icon -->
+    <path d="M 18 25 L 34 17 L 27 32 L 23 27 L 18 25 Z M 23 27 L 34 17" stroke="#16a34a" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <text class="not-title" x="46" y="22">Delivery Destinations</text>
+    <text class="not-sub" x="46" y="34">Production &amp; Sandbox</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Output Card 1: Production Inboxes -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="96" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">📬 Production Inboxes</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Citizen filing confirmations</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• STRR host approval notifications</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Verified SPF / DKIM / DMARC</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">99.9% inbox deliverability</text>
+    </g>
+
+    <!-- Output Card 2: Mailhog Dev Viewer -->
+    <g transform="translate(10, 156)">
+      <rect width="195" height="110" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#92400e">🧪 Mailhog Web Console</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Safe sandbox for dev &amp; test</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Interactive HTML email previews</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Attachment download checking</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#d97706">PR preview &amp; E2E validation</text>
+      <text x="10" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#78350f">Zero outbound external SMTP</text>
+    </g>
+  </g>
+</svg>

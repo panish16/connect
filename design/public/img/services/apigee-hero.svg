@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="apigee-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.10" />
+    </filter>
+
+    <style>
+      .node-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .node-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .node-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10.5px; fill: #64748b; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-log { stroke: #059669; stroke-width: 1.8; stroke-dasharray: 4 4; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #1d4ed8; }
+      .log-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #059669; }
+      .log-bg { rx: 4; fill: #ecfdf5; stroke: #a7f3d0; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .node-card { fill: #1e293b; stroke: #334155; }
+        .node-title { fill: #f8fafc; }
+        .node-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #60a5fa; }
+        .edge-log { stroke: #34d399; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #93c5fd; }
+        .log-bg { fill: #064e3b; stroke: #059669; }
+        .log-tag { fill: #6ee7b7; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="840" height="300" rx="16" fill="url(#apigee-bg-gradient)"/>
+  <rect width="838" height="298" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Badge -->
+  <g transform="translate(28, 18)">
+    <rect width="260" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#2563eb"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">ENTERPRISE API MANAGEMENT</text>
+  </g>
+
+  <!-- Left: Client Applications -->
+  <g transform="translate(40, 80)">
+    <rect class="node-card" width="150" height="150"/>
+    <rect x="12" y="14" width="32" height="32" rx="6" fill="#dbeafe"/>
+    <!-- App icon -->
+    <path d="M 20 23 L 36 23 L 36 37 L 20 37 Z" stroke="#1d4ed8" stroke-width="1.8" fill="none"/>
+    <path d="M 28 20 L 28 40" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text class="node-title" x="52" y="27">API Consumers</text>
+    <text class="node-sub" x="52" y="40">Ministry Apps &amp; SPAs</text>
+
+    <line x1="12" y1="56" x2="138" y2="56" stroke="#f1f5f9" stroke-width="1"/>
+    
+    <text x="14" y="75" class="node-sub">• Public Developers</text>
+    <text x="14" y="93" class="node-sub">• Ministry Frontends</text>
+    <text x="14" y="111" class="node-sub">• Partner Backends</text>
+    <text x="14" y="132" class="node-sub" font-weight="600" fill="#2563eb">HTTPS (x-apikey / JWT)</text>
+  </g>
+
+  <!-- Arrow 1: Clients -> Apigee Gateway -->
+  <path d="M 190 155 L 260 155" class="edge-solid"/>
+  <g transform="translate(195, 134)">
+    <rect class="tag-bg" width="60" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="28" y="4" text-anchor="middle">REST / JSON</text>
+  </g>
+
+  <!-- Center: Google Cloud Apigee Core Gateway -->
+  <g transform="translate(265, 65)">
+    <rect width="250" height="180" rx="12" fill="#003366" filter="url(#card-shadow)"/>
+    
+    <!-- Apigee Header Pill -->
+    <rect x="16" y="14" width="218" height="30" rx="6" fill="#002244"/>
+    <circle cx="32" cy="29" r="7" fill="#FCBA19"/>
+    <path d="M 32 24 L 36 27 L 36 32 C 36 35 32 37 32 37 C 32 37 28 35 28 32 L 28 27 Z" fill="#002244"/>
+    <text x="46" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">api.connect.gov.bc.ca</text>
+
+    <!-- Sub-policies list inside Apigee -->
+    <g transform="translate(16, 54)">
+      <rect width="218" height="22" rx="4" fill="#0f3c6d"/>
+      <text x="10" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#93c5fd">🛡️ Security: x-apikey &amp; JWT Verification</text>
+    </g>
+
+    <g transform="translate(16, 82)">
+      <rect width="218" height="22" rx="4" fill="#0f3c6d"/>
+      <text x="10" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#93c5fd">⚡ Traffic: Spike Arrest &amp; Rate Quotas</text>
+    </g>
+
+    <g transform="translate(16, 110)">
+      <rect width="218" height="22" rx="4" fill="#0f3c6d"/>
+      <text x="10" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#93c5fd">🔀 Reverse Proxy &amp; CORS Termination</text>
+    </g>
+
+    <g transform="translate(16, 138)">
+      <rect width="218" height="24" rx="4" fill="#064e3b"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#6ee7b7">📡 Product Log Router &amp; Telemetry</text>
+    </g>
+  </g>
+
+  <!-- Right Upper: Backend Services (Cloud Run) -->
+  <path d="M 515 110 L 590 110" class="edge-solid"/>
+  <g transform="translate(525, 90)">
+    <rect class="tag-bg" width="55" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="25" y="4" text-anchor="middle">Proxy Pass</text>
+  </g>
+
+  <g transform="translate(595, 60)">
+    <rect class="node-card" width="205" height="95"/>
+    <rect x="12" y="12" width="30" height="30" rx="6" fill="#e0e7ff"/>
+    <path d="M 27 17 L 35 24 L 27 31 L 19 24 Z" stroke="#4338ca" stroke-width="1.6" fill="none"/>
+    <text class="node-title" x="48" y="24">Backend Services</text>
+    <text class="node-sub" x="48" y="37">Isolated Cloud Run</text>
+
+    <line x1="12" y1="48" x2="193" y2="48" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="14" y="63" class="node-sub">/pay ➔ Pay Service</text>
+    <text x="14" y="77" class="node-sub">/auth ➔ Auth Service</text>
+    <text x="14" y="90" class="node-sub">/business ➔ Business Service</text>
+  </g>
+
+  <!-- Right Lower: Separated Product Cloud Logging Sinks -->
+  <path d="M 515 210 L 595 210" class="edge-log"/>
+  <g transform="translate(525, 192)">
+    <rect class="log-bg" width="60" height="18" x="-2" y="-9"/>
+    <text class="log-tag" x="28" y="4" text-anchor="middle">Log Sink</text>
+  </g>
+
+  <g transform="translate(595, 168)">
+    <rect class="node-card" width="205" height="95" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="12" y="12" width="30" height="30" rx="6" fill="#ecfdf5"/>
+    <!-- Terminal / log icon -->
+    <path d="M 18 21 L 23 26 L 18 31 M 25 31 L 32 31" stroke="#059669" stroke-width="1.8" stroke-linecap="round"/>
+    <text class="node-title" x="48" y="24" fill="#065f46">Product Cloud Logging</text>
+    <text class="node-sub" x="48" y="37">Per-Product Log Access</text>
+
+    <line x1="12" y1="48" x2="193" y2="48" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="14" y="63" class="node-sub" font-weight="600" fill="#059669">✓ Pay Team ➔ Pay Log Sink</text>
+    <text x="14" y="77" class="node-sub" font-weight="600" fill="#059669">✓ Auth Team ➔ Auth Log Sink</text>
+    <text x="14" y="90" class="node-sub" font-weight="600" fill="#059669">✓ Direct Dev Access in GCP</text>
+  </g>
+
+  <!-- Bottom Sub-line info -->
+  <text x="420" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">
+    Secure ingress, automated security policies, and decentralized product telemetry for BC Government engineering teams.
+  </text>
+</svg>

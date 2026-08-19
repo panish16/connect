@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 const route = useRoute()
-const navigation = inject<Ref<any[]>>('navigation')
+const navigation = inject<Ref<unknown[]>>('navigation')
 
 definePageMeta({
   layout: 'connect-auth'

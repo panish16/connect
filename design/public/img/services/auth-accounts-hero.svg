@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Subtle background gradient -->
+    <linearGradient id="auth-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="auth-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .node-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .node-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .node-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-dashed { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 4 4; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1d4ed8; }
+      .role-badge-admin { rx: 4; fill: #fef3c7; stroke: #fde68a; }
+      .role-badge-coord { rx: 4; fill: #e0e7ff; stroke: #c7d2fe; }
+      .role-badge-user  { rx: 4; fill: #f1f5f9; stroke: #e2e8f0; }
+
+      @media (prefers-color-scheme: dark) {
+        .node-card { fill: #1e293b; stroke: #334155; }
+        .node-title { fill: #f8fafc; }
+        .node-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #60a5fa; }
+        .edge-dashed { stroke: #93c5fd; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #93c5fd; }
+        .role-badge-admin { fill: #78350f; stroke: #b45309; }
+        .role-badge-coord { fill: #312e81; stroke: #4338ca; }
+        .role-badge-user  { fill: #334155; stroke: #475569; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#auth-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="360" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#10b981"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">FEDERATED AUTH • B2B API KEYS • TEAM ACCOUNTS</text>
+  </g>
+
+  <!-- Left Column: Identity Providers & B2B API Keys -->
+  <g transform="translate(30, 50)">
+    <rect class="node-card" width="170" height="275"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#dbeafe"/>
+    <!-- IdP Key Icon -->
+    <path d="M 22 17 A 3.5 3.5 0 1 1 22 24 A 3.5 3.5 0 0 1 22 17 M 26 21 L 33 21 M 30 21 L 30 24" stroke="#1d4ed8" stroke-width="1.6" fill="none"/>
+    <text class="node-title" x="46" y="22">Authentication Sources</text>
+    <text class="node-sub" x="46" y="34">Users &amp; B2B Connectors</text>
+
+    <line x1="12" y1="44" x2="158" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- IDP 1: BCSC -->
+    <g transform="translate(10, 52)">
+      <rect width="150" height="38" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="16" cy="19" r="8" fill="#2563eb"/>
+      <text x="16" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">BC</text>
+      <text x="30" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#1e3a8a">BC Services Card</text>
+      <text x="30" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Verified Citizen</text>
+    </g>
+
+    <!-- IDP 2: BCeID -->
+    <g transform="translate(10, 96)">
+      <rect width="150" height="38" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="16" cy="19" r="8" fill="#0284c7"/>
+      <text x="16" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">ID</text>
+      <text x="30" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">BCeID (Biz/Basic)</text>
+      <text x="30" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Business &amp; Enterprise</text>
+    </g>
+
+    <!-- IDP 3: IDIR -->
+    <g transform="translate(10, 140)">
+      <rect width="150" height="38" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="16" cy="19" r="8" fill="#003366"/>
+      <text x="16" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#FCBA19" text-anchor="middle">GOV</text>
+      <text x="30" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#003366">IDIR (Staff)</text>
+      <text x="30" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Provincial Staff &amp; Ops</text>
+    </g>
+
+    <!-- IDP 4: B2B API Keys -->
+    <g transform="translate(10, 184)">
+      <rect width="150" height="46" rx="6" fill="#fefce8" stroke="#fef08a" stroke-width="1.2"/>
+      <circle cx="16" cy="23" r="8" fill="#ca8a04"/>
+      <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">KEY</text>
+      <text x="30" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#854d0e">B2B Account API Key</text>
+      <text x="30" y="31" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#a16207">Machine Integrations</text>
+      <text x="30" y="41" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">login_source: "API_GW"</text>
+    </g>
+
+    <g transform="translate(10, 238)">
+      <rect width="150" height="26" rx="4" fill="#f1f5f9"/>
+      <text x="8" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569">⚡ Gateway Translates Key ➔ JWT</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: IDPs -> Core Connect Account -->
+  <path d="M 200 185 L 265 185" class="edge-solid"/>
+  <g transform="translate(208, 165)">
+    <rect class="tag-bg" width="50" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="23" y="4" text-anchor="middle">JWT Context</text>
+  </g>
+
+  <!-- Center Card: Connect Account & Multi-User Team -->
+  <g transform="translate(270, 45)">
+    <rect width="295" height="280" rx="12" fill="#003366" filter="url(#auth-shadow)"/>
+    
+    <!-- Account Title Header -->
+    <rect x="14" y="10" width="267" height="34" rx="6" fill="#002244"/>
+    <circle cx="30" cy="27" r="8" fill="#FCBA19"/>
+    <path d="M 25 31 C 25 27, 35 27, 35 31 M 30 23 A 3 3 0 1 1 30 22.9 Z" fill="#002244"/>
+    <text x="46" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff">Team Account: Pacific Legal LLP</text>
+    <text x="46" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#93c5fd">Account ID: 1999 • Premium Account</text>
+
+    <!-- Team Members & Roles Box -->
+    <g transform="translate(14, 50)">
+      <rect width="267" height="114" rx="6" fill="#0f3c6d"/>
+      <text x="12" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#93c5fd">MEMBERS, ROLES &amp; B2B CONNECTORS</text>
+
+      <!-- Member 1: Admin -->
+      <g transform="translate(8, 22)">
+        <rect width="251" height="24" rx="4" fill="#1e4e8c"/>
+        <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Sarah (Managing Partner)</text>
+        <rect x="190" y="4" width="53" height="16" class="role-badge-admin"/>
+        <text x="216" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#78350f" text-anchor="middle">ADMIN</text>
+      </g>
+
+      <!-- Member 2: Coordinator -->
+      <g transform="translate(8, 49)">
+        <rect width="251" height="24" rx="4" fill="#1e4e8c"/>
+        <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Elena (Senior Paralegal)</text>
+        <rect x="172" y="4" width="71" height="16" class="role-badge-coord"/>
+        <text x="207" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#312e81" text-anchor="middle">COORDINATOR</text>
+      </g>
+
+      <!-- Member 3: B2B System Key -->
+      <g transform="translate(8, 76)">
+        <rect width="251" height="24" rx="4" fill="#1e4e8c"/>
+        <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#fef08a">🤖 Clio / Legal Software Sync</text>
+        <rect x="176" y="4" width="67" height="16" rx="4" fill="#fef9c3" stroke="#facc15"/>
+        <text x="209" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#854d0e" text-anchor="middle">B2B API KEY</text>
+      </g>
+    </g>
+
+    <!-- Default Payment Method Bar -->
+    <g transform="translate(14, 172)">
+      <rect width="267" height="42" rx="6" fill="#064e3b"/>
+      <circle cx="18" cy="21" r="7" fill="#10b981"/>
+      <rect x="14" y="17" width="8" height="8" rx="1" fill="#064e3b"/>
+      <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#6ee7b7">DEFAULT PAYMENT: Pre-Authorized Debit (PAD)</text>
+      <text x="32" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#a7f3d0">Bank Trust Account • Auto-draw for Users &amp; B2B APIs</text>
+      <text x="32" y="39" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#d1fae5">Zero human checkout friction on programmatic transactions</text>
+    </g>
+
+    <!-- Durable Statement & Audit Ledger -->
+    <g transform="translate(14, 222)">
+      <rect width="267" height="24" rx="4" fill="#0a2e57"/>
+      <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#fde047">📜 Consolidated Transaction History &amp; Audit Trail</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Team Account -> Government eCommerce Products -->
+  <path d="M 565 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(573, 165)">
+    <rect class="tag-bg" width="56" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="26" y="4" text-anchor="middle">Authorized</text>
+  </g>
+
+  <!-- Right Column: eCommerce Platform Services & Personas -->
+  <g transform="translate(640, 50)">
+    <rect class="node-card" width="200" height="275"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#fef3c7"/>
+    <!-- Building/Services Icon -->
+    <path d="M 26 15 L 34 21 L 34 31 L 18 31 L 18 21 Z" stroke="#b45309" stroke-width="1.6" fill="none"/>
+    <text class="node-title" x="46" y="22">Provincial Services</text>
+    <text class="node-sub" x="46" y="34">BPC &amp; Gov't eCommerce</text>
+
+    <line x1="12" y1="44" x2="188" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Service Row 1 -->
+    <g transform="translate(10, 52)">
+      <rect width="180" height="42" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">💼 Law Firms &amp; Legal Groups</text>
+      <text x="8" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Business Filings, Liens, Wills</text>
+      <text x="8" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#2563eb">B2B API filings + Portal UI</text>
+    </g>
+
+    <!-- Service Row 2 -->
+    <g transform="translate(10, 102)">
+      <rect width="180" height="42" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">📐 Engineering &amp; Surveyors</text>
+      <text x="8" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Site Registry, Land Titles</text>
+      <text x="8" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#2563eb">Auto environmental search APIs</text>
+    </g>
+
+    <!-- Service Row 3 -->
+    <g transform="translate(10, 152)">
+      <rect width="180" height="42" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">🏢 Property Managers</text>
+      <text x="8" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">STRR Registry, Rural Tax</text>
+      <text x="8" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#2563eb">Automated annual reports</text>
+    </g>
+
+    <!-- Service Row 4 -->
+    <g transform="translate(10, 202)">
+      <rect width="180" height="42" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">🌲 Archaeology &amp; Heritage</text>
+      <text x="8" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Heritage Conservation Permits</text>
+      <text x="8" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#2563eb">Site record lookups</text>
+    </g>
+  </g>
+</svg>

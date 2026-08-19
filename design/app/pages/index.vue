@@ -23,7 +23,7 @@ definePageMeta({
         align="center"
       >
         <template #top>
-          <img src="/img/design-hero.svg" alt="Connect Architecture Platform Framework" class="block mx-auto mt-12 mb-8 w-full max-w-xl" />
+          <img src="/img/design-hero.svg" alt="Connect Architecture Platform Framework" class="block mx-auto mt-12 mb-8 w-full max-w-xl">
         </template>
       </UPageHero>
 

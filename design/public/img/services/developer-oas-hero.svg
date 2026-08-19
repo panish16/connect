@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="oas-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="oas-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .oas-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .oas-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .oas-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-dashed { stroke: #8b5cf6; stroke-width: 1.8; stroke-dasharray: 4 4; }
+      .tag-bg { rx: 4; fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #166534; }
+      .oas-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .oas-card { fill: #1e293b; stroke: #334155; }
+        .oas-title { fill: #f8fafc; }
+        .oas-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #60a5fa; }
+        .edge-dashed { stroke: #a78bfa; }
+        .tag-bg { fill: #064e3b; stroke: #059669; }
+        .edge-tag { fill: #a7f3d0; }
+        .oas-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#oas-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="420" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#8b5cf6"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">DEVELOPER OAS REGISTRY &amp; SCALAR RENDERING ENGINE</text>
+  </g>
+
+  <!-- Left Column: Developer OAS Publishing -->
+  <g transform="translate(30, 48)">
+    <rect class="oas-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#f3e8ff"/>
+    <!-- Document / Code Icon -->
+    <path d="M 18 16 L 30 16 L 34 20 L 34 32 L 18 32 Z M 22 22 L 30 22 M 22 26 L 30 26 M 22 30 L 27 30" stroke="#7c3aed" stroke-width="1.6" fill="none"/>
+    <text class="oas-title" x="46" y="22">Developer Publishing</text>
+    <text class="oas-sub" x="46" y="34">OpenAPI Spec Ingestion</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Step 1: Write Spec -->
+    <g transform="translate(10, 52)">
+      <rect class="oas-pill" width="220" height="60"/>
+      <rect x="8" y="8" width="6" height="44" rx="3" fill="#003366"/>
+      <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#003366">📄 OpenAPI 3.0 Specs</text>
+      <text x="20" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">YAML or JSON specification</text>
+      <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">defining schemas, routes &amp; auth</text>
+    </g>
+
+    <!-- Step 2: Directory Placement -->
+    <g transform="translate(10, 122)">
+      <rect class="oas-pill" width="220" height="60"/>
+      <rect x="8" y="8" width="6" height="44" rx="3" fill="#2563eb"/>
+      <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#1d4ed8">📁 Product Directory GitOps</text>
+      <text x="20" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Committed to dedicated folder</text>
+      <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#2563eb">e.g. /products/bpc/openapi.yaml</text>
+    </g>
+
+    <!-- Step 3: CI/CD Sync -->
+    <g transform="translate(10, 192)">
+      <rect class="oas-pill" width="220" height="62"/>
+      <rect x="8" y="8" width="6" height="46" rx="3" fill="#10b981"/>
+      <text x="20" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#047857">🚀 Automated CI/CD Sync</text>
+      <text x="20" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Linting via Spectral &amp; schema</text>
+      <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">validation prior to live publishing</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Developer -> Scalar Engine -->
+  <path d="M 270 185 L 320 185" class="edge-solid"/>
+  <g transform="translate(275, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">publish</text>
+  </g>
+
+  <!-- Center Card: Scalar OAS Engine & Rendering Core -->
+  <g transform="translate(320, 48)">
+    <rect width="280" height="278" rx="12" fill="#003366" filter="url(#oas-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="256" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#a855f7"/>
+    <!-- Scalar logo shape -->
+    <path d="M 24 29 L 28 23 L 32 29 Z" fill="#ffffff"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Scalar OAS Engine</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">@scalar/nuxt Interactive Reference</text>
+
+    <!-- Block 1: Scalar Nuxt Package -->
+    <g transform="translate(12, 50)">
+      <rect width="256" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#67e8f9">📦 @SCALAR/NUXT INTEGRATION</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Native Vue 3 &amp; Nuxt 4 rendering</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Lightning-fast static &amp; dynamic routing</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Zero-config OpenAPI schema parser</text>
+    </g>
+
+    <!-- Block 2: Interactive Sandbox & Client -->
+    <g transform="translate(12, 120)">
+      <rect width="256" height="74" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#fde047">⚡ LIVE "TRY IT" API CLIENT</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• Direct testing against api.connect.gov.bc.ca</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• API Key &amp; JWT header injection</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Safe sandbox testing &amp; mock responses</text>
+    </g>
+
+    <!-- Block 3: Multi-Language Code Generation -->
+    <g transform="translate(12, 200)">
+      <rect width="256" height="66" rx="6" fill="#4c1d95"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#d8b4fe">💻 MULTI-LANGUAGE CLIENT SDKS</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#f3e8ff">• Instant code snippets: cURL, TypeScript,</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#f3e8ff">  Python, Go, Java, C#, PHP, Ruby</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Copy-paste ready developer snippets</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Engine -> Consumer Experience -->
+  <path d="M 600 185 L 650 185" class="edge-solid"/>
+  <g transform="translate(605, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">render</text>
+  </g>
+
+  <!-- Right Column: Developer.Connect Consumer Experience -->
+  <g transform="translate(650, 48)">
+    <rect class="oas-card" width="200" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#e0e7ff"/>
+    <!-- Browser / App View Icon -->
+    <path d="M 18 16 L 34 16 L 34 32 L 18 32 Z M 18 21 L 34 21 M 21 18.5 L 21 18.5 M 24 18.5 L 24 18.5 M 27 18.5 L 27 18.5" stroke="#4338ca" stroke-width="1.6" fill="none"/>
+    <text class="oas-title" x="46" y="22">Developer Portal</text>
+    <text class="oas-sub" x="46" y="34">developer.connect.gov.bc.ca</text>
+
+    <line x1="12" y1="44" x2="188" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Portal Feature 1: Product Catalog -->
+    <g transform="translate(10, 52)">
+      <rect width="180" height="60" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">📚 Product Catalog</text>
+      <text x="8" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Publicly discoverable APIs:</text>
+      <text x="8" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">BPC, STRR, Pay, Auth, PPR</text>
+      <text x="8" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#15803d">Auto-updated on Git push</text>
+    </g>
+
+    <!-- Portal Feature 2: Interactive Explorer -->
+    <g transform="translate(10, 122)">
+      <rect width="180" height="60" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">🔍 Schema Explorer</text>
+      <text x="8" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Deep nested model inspection,</text>
+      <text x="8" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">payload examples &amp; status codes</text>
+      <text x="8" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#0284c7">WCAG 2.1 AA Accessible</text>
+    </g>
+
+    <!-- Portal Feature 3: API Key Integration -->
+    <g transform="translate(10, 192)">
+      <rect width="180" height="62" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="8" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">🔑 B2B Key Testing</text>
+      <text x="8" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">Test requests directly with</text>
+      <text x="8" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">x-apikey headers through Apigee</text>
+      <text x="8" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#b45309">Turnkey Integration</text>
+    </g>
+  </g>
+</svg>

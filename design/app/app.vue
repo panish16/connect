@@ -7,8 +7,15 @@ useHead({
   }
 })
 
+interface NavItem {
+  title?: string
+  path: string
+  children?: NavItem[]
+  [key: string]: unknown
+}
+
 const { data: navigation } = await useAsyncData(() => `navigation-${locale.value}`, async () => {
-  const rawNav = await queryCollectionNavigation('content')
+  const rawNav = await queryCollectionNavigation('content') as NavItem[]
   
   const activeLocalePath = '/' + locale.value.toLowerCase()
   const activeBranch = rawNav.find(n => n.path.toLowerCase() === activeLocalePath)
@@ -17,7 +24,7 @@ const { data: navigation } = await useAsyncData(() => `navigation-${locale.value
     return []
   }
 
-  const stripPrefix = (nodes: any[]): any[] => {
+  const stripPrefix = (nodes: NavItem[]): NavItem[] => {
     return nodes.map(node => {
       const newNode = { ...node }
       if (newNode.path.toLowerCase().startsWith(activeLocalePath)) {

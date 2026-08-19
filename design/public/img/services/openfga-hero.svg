@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <linearGradient id="accent-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCBA19"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.12" />
+    </filter>
+
+    <style>
+      .node-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .node-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .node-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #64748b; }
+      .edge-line { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 4 4; animation: dash 20s linear infinite; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #1d4ed8; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .badge-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #003366; }
+      
+      @media (prefers-color-scheme: dark) {
+        .node-card { fill: #1e293b; stroke: #334155; }
+        .node-title { fill: #f8fafc; }
+        .node-sub { fill: #94a3b8; }
+        .edge-line { stroke: #475569; }
+        .edge-solid { stroke: #60a5fa; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #93c5fd; }
+        .badge-text { fill: #fde047; }
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Container -->
+  <rect width="800" height="280" rx="16" fill="url(#bg-gradient)"/>
+  <rect width="798" height="278" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Left Node: Subject / User -->
+  <g transform="translate(60, 95)">
+    <rect class="node-card" width="160" height="90"/>
+    <rect x="12" y="14" width="36" height="36" rx="8" fill="#dbeafe"/>
+    <circle cx="30" cy="28" r="7" fill="#1d4ed8"/>
+    <path d="M 20 44 C 20 37, 40 37, 40 44" fill="#1d4ed8"/>
+    
+    <text class="node-title" x="58" y="29">user:anne</text>
+    <text class="node-sub" x="58" y="44">Identity Subject</text>
+    
+    <line x1="12" y1="58" x2="148" y2="58" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="14" y="74" class="node-sub" font-size="10">BCSC / IDIR / Service</text>
+  </g>
+
+  <!-- Arrow 1: User -> Team (member) -->
+  <path d="M 220 140 L 310 140" class="edge-solid" marker-end="url(#arrow)"/>
+  <g transform="translate(235, 120)">
+    <rect class="tag-bg" width="60" height="18" x="-5" y="-9"/>
+    <text class="edge-tag" x="25" y="4" text-anchor="middle">member</text>
+  </g>
+
+  <!-- Middle Center: Middle Group Node (Team:engineering) -->
+  <g transform="translate(320, 95)">
+    <rect class="node-card" width="160" height="90"/>
+    <rect x="12" y="14" width="36" height="36" rx="8" fill="#fef3c7"/>
+    <!-- Team icon -->
+    <circle cx="26" cy="27" r="5" fill="#d97706"/>
+    <circle cx="34" cy="27" r="5" fill="#b45309"/>
+    <path d="M 18 41 C 18 36, 42 36, 42 41" fill="#d97706"/>
+    
+    <text class="node-title" x="58" y="29">group:finance</text>
+    <text class="node-sub" x="58" y="44">Team / Hierarchy</text>
+    
+    <line x1="12" y1="58" x2="148" y2="58" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="14" y="74" class="node-sub" font-size="10">Inherits Permissions</text>
+  </g>
+
+  <!-- Arrow 2: Group -> Document (editor) -->
+  <path d="M 480 140 L 570 140" class="edge-solid"/>
+  <g transform="translate(495, 120)">
+    <rect class="tag-bg" width="60" height="18" x="-5" y="-9"/>
+    <text class="edge-tag" x="25" y="4" text-anchor="middle">editor</text>
+  </g>
+
+  <!-- Right Node: Target Resource (doc:statutory-filing) -->
+  <g transform="translate(580, 95)">
+    <rect class="node-card" width="160" height="90"/>
+    <rect x="12" y="14" width="36" height="36" rx="8" fill="#e0e7ff"/>
+    <!-- Doc icon -->
+    <path d="M 22 20 L 34 20 L 40 26 L 40 42 L 22 42 Z" fill="#4338ca"/>
+    <path d="M 34 20 L 34 26 L 40 26 Z" fill="#c7d2fe"/>
+    
+    <text class="node-title" x="58" y="29">doc:filing-2026</text>
+    <text class="node-sub" x="58" y="44">Protected Object</text>
+    
+    <line x1="12" y1="58" x2="148" y2="58" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="14" y="74" class="node-sub" font-size="10">Target Ministry Resource</text>
+  </g>
+
+  <!-- Curved Direct Edge from User to Doc (viewer) -->
+  <path d="M 140 95 C 140 40, 660 40, 660 95" class="edge-line"/>
+  <g transform="translate(370, 42)">
+    <rect class="tag-bg" width="80" height="20" x="-10" y="-10"/>
+    <text class="edge-tag" x="30" y="4" text-anchor="middle">direct viewer</text>
+  </g>
+
+  <!-- Center Bottom Evaluation Engine: OpenFGA Check Engine -->
+  <g transform="translate(260, 215)">
+    <rect width="280" height="46" rx="23" fill="#003366" filter="url(#drop-shadow)"/>
+    <!-- Shield Icon -->
+    <circle cx="28" cy="23" r="14" fill="#FCBA19"/>
+    <path d="M 28 14 L 35 18 L 35 25 C 35 30 28 33 28 33 C 28 33 21 30 21 25 L 21 18 Z" fill="#003366"/>
+    <path d="M 25 23 L 27 25 L 31 20" stroke="#FCBA19" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text x="54" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">OpenFGA Graph Evaluation</text>
+    <text x="54" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#93c5fd">check(user:anne, can_edit, doc:filing-2026) ➔ ALLOWED</text>
+  </g>
+
+  <!-- Top Header Pill -->
+  <g transform="translate(28, 20)">
+    <rect width="220" height="28" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="16" cy="14" r="5" fill="#10b981"/>
+    <text x="28" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">ZANZIBAR-INSPIRED ReBAC</text>
+  </g>
+</svg>

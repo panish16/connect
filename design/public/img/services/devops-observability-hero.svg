@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="obs-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#003366" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="obs-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .obs-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .obs-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .obs-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .obs-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .obs-card { fill: #1e293b; stroke: #334155; }
+        .obs-title { fill: #f8fafc; }
+        .obs-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .obs-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#obs-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="550" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#8b5cf6"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">ENTERPRISE OBSERVABILITY: SCC ➔ CLOUD LOGGING ➔ CLOUD TRACING</text>
+  </g>
+
+  <!-- Left Column: The 3 Telemetry & Security Pillars -->
+  <g transform="translate(30, 48)">
+    <rect class="obs-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- Radar / Activity icon -->
+    <path d="M 18 24 L 22 24 L 25 17 L 29 31 L 32 24 L 36 24" stroke="#2563eb" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="obs-title" x="46" y="22">Telemetry Pillars</text>
+    <text class="obs-sub" x="46" y="34">GCP Operational Signals</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Pillar 1: Security Command Center -->
+    <g transform="translate(10, 50)">
+      <rect class="obs-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#e11d48"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#be123c">Security Command Center</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Threat &amp; vulnerability posture</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• IAM &amp; misconfiguration audits</text>
+    </g>
+
+    <!-- Pillar 2: Cloud Logging -->
+    <g transform="translate(10, 108)">
+      <rect class="obs-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#0284c7"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">Cloud Logging Sinks</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Structured JSON log streams</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Product-scoped log routing</text>
+    </g>
+
+    <!-- Pillar 3: Cloud Tracing -->
+    <g transform="translate(10, 166)">
+      <rect class="obs-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#8b5cf6"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6d28d9">Cloud Trace (OpenTelemetry)</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Distributed latency spans</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• End-to-end request waterfall</text>
+    </g>
+
+    <!-- Pillar 4: Signal Summary Tag -->
+    <g transform="translate(10, 224)">
+      <rect width="220" height="30" rx="6" fill="#f1f5f9"/>
+      <text x="12" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#334155">⚡ Correlated by Trace &amp; Span ID</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Telemetry -> Central Intelligence Engine -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">stream</text>
+  </g>
+
+  <!-- Center Card: SRE Intelligence & Correlation Hub -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#obs-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#8b5cf6"/>
+    <!-- Analytics Eye / Brain icon -->
+    <path d="M 21 27 C 24 22 32 22 35 27 C 32 32 24 32 21 27 Z M 28 29 C 29.1 29 30 28.1 30 27 C 30 25.9 29.1 25 28 25 C 26.9 25 26 25.9 26 27 C 26 28.1 26.9 29 28 29 Z" fill="#ffffff"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">SRE Intelligence Hub</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Regional northamerica-northeast1</text>
+
+    <!-- Block 1: Real-Time Signal Correlation -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="66" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">🔗 SIGNAL CORRELATION ENGINE</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Trace span links directly to exact error logs</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Sub-second root cause identification</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Unified telemetry across microservices</text>
+    </g>
+
+    <!-- Block 2: SLO / SLI Tracking -->
+    <g transform="translate(12, 122)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">📈 SLO &amp; SLI HEALTH MONITORING</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• 99.9% availability &amp; latency budgets</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Automated burn-rate anomaly detection</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Proactive alerting before user disruption</text>
+    </g>
+
+    <!-- Block 3: Security & Posture Alerts -->
+    <g transform="translate(12, 192)">
+      <rect width="246" height="74" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">🛡️ POSTURE &amp; THREAT DETECTIONS</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Real-time SCC threat notifications</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Automated security misconfiguration alerts</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">SRE &amp; Security Operations alignment</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: SRE Hub -> Product Teams -->
+  <path d="M 585 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(588, 165)">
+    <rect class="tag-bg" width="44" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="20" y="4" text-anchor="middle">empower</text>
+  </g>
+
+  <!-- Right Column: Product Team Empowerment & Self-Serve -->
+  <g transform="translate(635, 48)">
+    <rect class="obs-card" width="215" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#f5f3ff"/>
+    <!-- Users / Handshake icon -->
+    <path d="M 21 18 C 22.6 18 24 16.6 24 15 C 24 13.4 22.6 12 21 12 C 19.4 12 18 13.4 18 15 C 18 16.6 19.4 18 21 18 Z M 29 19 C 30.1 19 31 18.1 31 17 C 31 15.9 30.1 15 29 15 C 27.9 15 27 15.9 27 17 C 27 18.1 27.9 19 29 19 Z M 21 20 C 18.3 20 16 21.8 16 24 L 16 26 L 26 26 L 26 24 C 26 21.8 23.7 20 21 20 Z M 27.5 21.2 C 28.6 22 29.5 23.1 29.5 24.5 L 29.5 26 L 33 26 L 33 24.5 C 33 22.8 30.5 21.6 27.5 21.2 Z" fill="#7c3aed"/>
+    <text class="obs-title" x="46" y="22">Product Teams</text>
+    <text class="obs-sub" x="46" y="34">Shared Ops &amp; Support</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Empower Card 1: Problem Determination -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="96" rx="8" fill="#f5f3ff" stroke="#ede9fe" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#5b21b6">🔍 Problem Determination</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#4c1d95">• Direct Logs Explorer access</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#4c1d95">• Trace waterfall inspection</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#4c1d95">• Shared runbooks with SRE</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#7c3aed">Decentralized log sink access</text>
+    </g>
+
+    <!-- Empower Card 2: Proactive Support -->
+    <g transform="translate(10, 156)">
+      <rect width="195" height="110" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">🚀 Proactive Operations</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Early warning before downtime</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Latency regression catches</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Security posture tracking</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#15803d">Elevated Partner Support</text>
+      <text x="10" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#166534">Zero blind spots in production</text>
+    </g>
+  </g>
+</svg>

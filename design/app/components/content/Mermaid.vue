@@ -30,13 +30,13 @@ async function renderDiagram() {
     try {
       const colorMode = useColorMode()
       theme = colorMode.value === 'dark' ? 'dark' : 'default'
-    } catch (e) {
+    } catch {
       console.warn('Mermaid: Could not detect color mode, using default')
     }
 
     mermaid.initialize({
       startOnLoad: false,
-      theme: theme as any,
+      theme: theme as 'default' | 'dark',
       securityLevel: 'loose',
     })
 
@@ -49,9 +49,9 @@ async function renderDiagram() {
     console.log('Mermaid: Rendering complete')
     svg.value = svgContent
     isLoading.value = false
-  } catch (e: any) {
-    console.error('Mermaid: Error during rendering:', e)
-    error.value = e.message || 'Failed to render diagram'
+  } catch (err: unknown) {
+    console.error('Mermaid: Error during rendering:', err)
+    error.value = err instanceof Error ? err.message : 'Failed to render diagram'
     isLoading.value = false
   }
 }
@@ -68,7 +68,7 @@ if (import.meta.client) {
       console.log('Mermaid: Code or color mode changed, re-rendering...')
       renderDiagram()
     })
-  } catch (e) {
+  } catch {
     watch(() => props.code, () => {
       renderDiagram()
     })
@@ -99,7 +99,7 @@ if (import.meta.client) {
     </div>
 
     <!-- Output State -->
-    <div v-if="svg" v-html="svg" class="w-full flex justify-center overflow-x-auto py-4" />
+    <div v-if="svg" class="w-full flex justify-center overflow-x-auto py-4" v-html="svg" />
   </div>
 </template>
 

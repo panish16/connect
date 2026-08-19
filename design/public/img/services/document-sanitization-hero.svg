@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="san-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#003366" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#16a34a" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="san-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .san-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .san-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .san-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .san-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .san-card { fill: #1e293b; stroke: #334155; }
+        .san-title { fill: #f8fafc; }
+        .san-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .san-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#san-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="570" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#16a34a"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">DOCUMENT SANITIZATION: ZERO-TRUST SANDBOX CONVERSION TO SAFE PDF</text>
+  </g>
+
+  <!-- Left Column: Untrusted Input Documents -->
+  <g transform="translate(30, 48)">
+    <rect class="san-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#fef2f2"/>
+    <!-- Warning File icon -->
+    <path d="M 19 14 L 27 14 L 33 20 L 33 32 L 19 32 Z M 27 14 L 27 20 L 33 20 M 26 23 L 26 27 M 26 29.5 L 26 30" stroke="#dc2626" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text class="san-title" x="46" y="22">Untrusted Ingestion</text>
+    <text class="san-sub" x="46" y="34">Inbound &amp; Outbound Files</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Threat 1: Office Files with Macros -->
+    <g transform="translate(10, 50)">
+      <rect class="san-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#dc2626"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#b91c1c">Word &amp; Excel (.docx, .xlsm)</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Hidden VBA macros &amp; DDE links</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Embedded OLE payload risks</text>
+    </g>
+
+    <!-- Threat 2: Untrusted PDFs -->
+    <g transform="translate(10, 108)">
+      <rect class="san-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#ea580c"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#c2410c">Inbound Citizen PDFs</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Malicious embedded JavaScript</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Zero-day PDF reader exploits</text>
+    </g>
+
+    <!-- Threat 3: Images & Attachments -->
+    <g transform="translate(10, 166)">
+      <rect class="san-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#d97706"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#b45309">Evidence &amp; Media Files</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Web tracking beacons &amp; EXIF</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Steganography / corrupt headers</text>
+    </g>
+
+    <!-- Input 4: Inbound / Outbound Tag -->
+    <g transform="translate(10, 224)">
+      <rect width="220" height="30" rx="6" fill="#f1f5f9"/>
+      <text x="12" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#334155">🛡️ Zero-Trust Inbound &amp; Outbound Shield</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Inputs -> Sanitization Sandbox -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">isolate</text>
+  </g>
+
+  <!-- Center Card: Sandboxed Sanitization Engine (Dangerzone Model) -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#san-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#10b981"/>
+    <!-- Shield / Sterilize icon -->
+    <path d="M 28 19 L 34 22 L 34 27 C 34 31 28 34 28 34 C 28 34 22 31 22 27 L 22 22 Z M 25 26 L 27 28 L 31 23" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Sanitization Chamber</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Dangerzone Pixel-Isolation Model</text>
+
+    <!-- Block 1: Ephemeral Container Sandbox -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="66" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">📦 EPHEMERAL GVISOR SANDBOX</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Document opened in isolated sandbox</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Strict zero-network kernel containment</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Disposed immediately after conversion</text>
+    </g>
+
+    <!-- Block 2: Pixel-Level Rasterization -->
+    <g transform="translate(12, 122)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">🎨 RAW PIXEL RASTERIZATION</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Converts every page to raw RGB pixels</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• All executable code &amp; macros destroyed</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Pure visual representations only</text>
+    </g>
+
+    <!-- Block 3: Safe PDF Reconstruction -->
+    <g transform="translate(12, 192)">
+      <rect width="246" height="74" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">📄 CLEAN PDF RECONSTRUCTION</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Builds 100% clean, sterile PDF from pixels</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Optional high-speed OCR text recovery</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Zero possibility of user infection</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Sandbox -> Clean PDF Output -->
+  <path d="M 585 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(588, 165)">
+    <rect class="tag-bg" width="44" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="20" y="4" text-anchor="middle">clean</text>
+  </g>
+
+  <!-- Right Column: Guaranteed Safe PDF Output -->
+  <g transform="translate(635, 48)">
+    <rect class="san-card" width="215" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#f0fdf4"/>
+    <!-- Check Shield icon -->
+    <path d="M 26 16 L 32 19 L 32 24 C 32 28 26 31 26 31 C 26 31 20 28 20 24 L 20 19 Z M 23 23 L 25 25 L 29 21" stroke="#16a34a" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <text class="san-title" x="46" y="22">Clean Output</text>
+    <text class="san-sub" x="46" y="34">Safe for All Users</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Output Card 1: Safe Inbound -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="96" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">📥 Inbound Protection</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Staff examiners view safely</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Evidence &amp; tribunal filings</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Citizen attachments sanitized</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">Zero internal network risk</text>
+    </g>
+
+    <!-- Output Card 2: Safe Outbound -->
+    <g transform="translate(10, 156)">
+      <rect width="195" height="110" rx="8" fill="#eff6ff" stroke="#dbeafe" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#1e40af">📤 Outbound Assurance</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Publicly downloadable PDFs</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• FOI release document packs</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#1e3a8a">• Safe sharing with external counsel</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#2563eb">Guaranteed clean delivery</text>
+      <text x="10" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#1e40af">Zero malware liability</text>
+    </g>
+  </g>
+</svg>

@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, type Page } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import { getTestCredentials } from './test-helpers'
 
 /**
  * Automates logging in through Siteminder / Keycloak if a redirect is triggered.
  */
-async function loginIfRequired(page: any, path: string) {
+async function loginIfRequired(page: Page, path: string) {
   await page.goto(path)
 
   try {
@@ -28,7 +28,7 @@ async function loginIfRequired(page: any, path: string) {
 
     // Wait until redirected back to the documentation site
     await page.waitForURL(url => url.origin.includes('localhost:3000'), { timeout: 35000 })
-  } catch (e) {
+  } catch {
     // Already on the documentation site or no redirect occurred, proceed
   }
 }
@@ -41,8 +41,31 @@ test.describe('Accessibility (a11y) Audits', () => {
     { name: 'Standards Page', path: '/standards' },
     { name: 'Executive Page', path: '/executive' },
     { name: 'Product Owners Page', path: '/product-owners' },
-    { name: 'Technical Page', path: '/technical' }
+    { name: 'Technical Page', path: '/technical' },
+    { name: 'Services Hub Page', path: '/services' },
+    { name: 'OpenFGA Service Page', path: '/services/openfga' },
+    { name: 'Apigee Service Page', path: '/services/apigee' },
+    { name: 'Authentication & Team Accounts Page', path: '/services/auth' },
+    { name: 'Connect-Nuxt Framework Page', path: '/services/connect-nuxt' },
+    { name: 'Data Warehouse Service Page', path: '/services/data-warehouse' },
+    { name: 'Developer OAS Registry Service Page', path: '/services/developer-oas-registry' },
+    { name: 'DevOps CD Service Page', path: '/services/devops-cd' },
+    { name: 'DevOps CI Service Page', path: '/services/devops-ci' },
+    { name: 'DevOps Security Scanning Page', path: '/services/devops-image-library-scanning' },
+    { name: 'DevOps Observability Service Page', path: '/services/devops-observability' },
+    { name: 'Document Creation Service Page', path: '/services/document-creation' },
+    { name: 'Document Sanitization Service Page', path: '/services/document-sanitization' },
+    { name: 'Document Storage Service Page', path: '/services/document-storage' },
+    { name: 'Notify Service Page', path: '/services/notify' },
+    { name: 'Organizational Change Management Service Page', path: '/services/organizational-change-management' },
+    { name: 'Pay Service Page', path: '/services/pay' }
   ]
+
+
+
+
+
+
 
   for (const pageInfo of pagesToTest) {
     test(`${pageInfo.name} should have no accessibility violations`, async ({ page }) => {

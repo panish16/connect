@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="doc-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="doc-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .doc-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .doc-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .doc-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .doc-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .doc-card { fill: #1e293b; stroke: #334155; }
+        .doc-title { fill: #f8fafc; }
+        .doc-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .doc-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#doc-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="570" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#f59e0b"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">MANAGED DOCUMENT CREATION: GOTENBERG + BC SANS FONTS (HTML/DOCX ➔ PDF)</text>
+  </g>
+
+  <!-- Left Column: Multi-Format Inputs -->
+  <g transform="translate(30, 48)">
+    <rect class="doc-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- Document file icon -->
+    <path d="M 19 14 L 27 14 L 33 20 L 33 32 L 19 32 Z M 27 14 L 27 20 L 33 20" stroke="#2563eb" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text class="doc-title" x="46" y="22">Document Inputs</text>
+    <text class="doc-sub" x="46" y="34">Any Source Format</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Input 1: HTML / CSS / Tailwind -->
+    <g transform="translate(10, 50)">
+      <rect class="doc-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#0284c7"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">HTML5 &amp; CSS3 / Tailwind</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Full Chromium print styling</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Dynamic Jinja/Handlebars templates</text>
+    </g>
+
+    <!-- Input 2: Office Documents -->
+    <g transform="translate(10, 108)">
+      <rect class="doc-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#10b981"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#047857">Office Docs (.docx, .xlsx, .pptx)</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• LibreOffice conversion engine</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Form letter &amp; spreadsheet rendering</text>
+    </g>
+
+    <!-- Input 3: Markdown & PDF Merging -->
+    <g transform="translate(10, 166)">
+      <rect class="doc-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#8b5cf6"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6d28d9">Markdown &amp; PDF Merge</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Multi-PDF stitching &amp; watermarking</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Headers, footers &amp; page numbering</text>
+    </g>
+
+    <!-- Input 4: Summary Tag -->
+    <g transform="translate(10, 224)">
+      <rect width="220" height="30" rx="6" fill="#f1f5f9"/>
+      <text x="12" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#334155">⚡ Managed REST API (api.connect.gov.bc.ca)</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Inputs -> Gotenberg Engine -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">render</text>
+  </g>
+
+  <!-- Center Card: Managed Gotenberg Engine -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#doc-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#f59e0b"/>
+    <!-- Printer / Engine icon -->
+    <path d="M 22 22 L 34 22 L 34 29 L 22 29 Z M 24 22 L 24 16 L 32 16 L 32 22 M 24 26 L 32 26" stroke="#ffffff" stroke-width="1.6" fill="none"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Managed Gotenberg</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Google Cloud Run (Montreal)</text>
+
+    <!-- Block 1: Pre-installed BC Sans Fonts -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="66" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">🏛️ PRE-INSTALLED BC SANS FONTS</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• BCSans Regular, Bold, Italic pre-baked</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Zero font substitution or layout jitter</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">Official provincial branding compliance</text>
+    </g>
+
+    <!-- Block 2: Headless Engines -->
+    <g transform="translate(12, 122)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">⚙️ HIGH-SPEED HEADLESS ENGINES</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Headless Chromium + LibreOffice 24.x</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• PDFtk / QPDF high-speed merging</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Sub-second generation latency</text>
+    </g>
+
+    <!-- Block 3: Managed Multi-Tenant SRE -->
+    <g transform="translate(12, 192)">
+      <rect width="246" height="74" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">🚀 ZERO-MAINTENANCE INFRASTRUCTURE</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Auto-scaling 0-N instances on Cloud Run</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• No local Chromium / LibreOffice bloat</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Shared across all ministry partners</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Gotenberg -> Output PDFs -->
+  <path d="M 585 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(588, 165)">
+    <rect class="tag-bg" width="44" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="20" y="4" text-anchor="middle">output</text>
+  </g>
+
+  <!-- Right Column: Official Generated Artifacts -->
+  <g transform="translate(635, 48)">
+    <rect class="doc-card" width="215" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#fffbeb"/>
+    <!-- Stamp / Certificate icon -->
+    <path d="M 26 16 L 20 22 L 20 30 L 26 27 L 32 30 L 32 22 Z" stroke="#d97706" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text class="doc-title" x="46" y="22">Official Output</text>
+    <text class="doc-sub" x="46" y="34">PDF/A &amp; Certified Docs</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Output Card 1: Official Documents -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="96" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#92400e">📜 Certified Provincial Docs</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Certificates of Incorporation</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Official Statements of Account</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#78350f">• Certified True Copies with seal</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#d97706">Pixel-perfect BC branding</text>
+    </g>
+
+    <!-- Output Card 2: Archival Compliance -->
+    <g transform="translate(10, 156)">
+      <rect width="195" height="110" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">🏛️ Archival &amp; PDF/A</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Long-term PDF/A compliance</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Embedded vector Crown logos</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Watermarked draft &amp; receipt PDFs</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#15803d">Direct Document Vault storage</text>
+      <text x="10" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#166534">Zero local binary dependencies</text>
+    </g>
+  </g>
+</svg>

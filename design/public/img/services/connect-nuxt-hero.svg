@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="nuxt-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="#00DC82" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FCBA19" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="nuxt-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .node-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .node-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .node-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #003366; stroke-width: 2; }
+      .edge-dashed { stroke: #00dc82; stroke-width: 1.8; stroke-dasharray: 4 4; }
+      .tag-bg { rx: 4; fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #166534; }
+      .layer-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .node-card { fill: #1e293b; stroke: #334155; }
+        .node-title { fill: #f8fafc; }
+        .node-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #60a5fa; }
+        .edge-dashed { stroke: #34d399; }
+        .tag-bg { fill: #064e3b; stroke: #059669; }
+        .edge-tag { fill: #a7f3d0; }
+        .layer-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#nuxt-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="390" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#00dc82"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">CONNECT-NUXT LAYERED FRONTEND ARCHITECTURE</text>
+  </g>
+
+  <!-- Left Column: Core Nuxt Layers Stack -->
+  <g transform="translate(30, 48)">
+    <rect class="node-card" width="280" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#dcfce7"/>
+    <!-- Nuxt/Layers icon -->
+    <path d="M 20 28 L 26 16 L 32 28 Z M 27 22 L 31 16 L 35 28 Z" stroke="#059669" stroke-width="1.6" fill="none"/>
+    <text class="node-title" x="46" y="22">Shared Nuxt Layers</text>
+    <text class="node-sub" x="46" y="34">@sbc-connect/nuxt-* Modules</text>
+
+    <line x1="12" y1="44" x2="268" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Layer 1: nuxt-base -->
+    <g transform="translate(10, 50)">
+      <rect class="layer-pill" width="260" height="48"/>
+      <rect x="8" y="8" width="6" height="32" rx="3" fill="#003366"/>
+      <text x="22" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">@sbc-connect/nuxt-base</text>
+      <text x="22" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">BC Gov Header/Footer • BC Sans • Nuxt UI v4 • A11y</text>
+    </g>
+
+    <!-- Layer 2: nuxt-auth -->
+    <g transform="translate(10, 104)">
+      <rect class="layer-pill" width="260" height="48"/>
+      <rect x="8" y="8" width="6" height="32" rx="3" fill="#2563eb"/>
+      <text x="22" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1d4ed8">@sbc-connect/nuxt-auth</text>
+      <text x="22" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">BCSC / BCeID / IDIR • Account Switcher • Token Refresh</text>
+    </g>
+
+    <!-- Layer 3: nuxt-pay -->
+    <g transform="translate(10, 158)">
+      <rect class="layer-pill" width="260" height="48"/>
+      <rect x="8" y="8" width="6" height="32" rx="3" fill="#10b981"/>
+      <text x="22" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#047857">@sbc-connect/nuxt-pay</text>
+      <text x="22" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Fee Calculator • Payment Selector • PAD/CC/EFT Layouts</text>
+    </g>
+
+    <!-- Layer 4: nuxt-forms / business -->
+    <g transform="translate(10, 212)">
+      <rect class="layer-pill" width="260" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#d97706"/>
+      <text x="22" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#b45309">@sbc-connect/nuxt-forms</text>
+      <text x="22" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Canada Post AddressComplete • Name Request Lookup</text>
+      <text x="22" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#0284c7">Director Verification • Folio / Reference Management</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Layers -> Nuxt Engine Extends -->
+  <path d="M 310 185 L 355 185" class="edge-solid"/>
+  <g transform="translate(315, 165)">
+    <rect class="tag-bg" width="46" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="21" y="4" text-anchor="middle">extends</text>
+  </g>
+
+  <!-- Center Card: Modern Component Engine (Nuxt UI + Business Components) -->
+  <g transform="translate(360, 48)">
+    <rect width="250" height="278" rx="12" fill="#003366" filter="url(#nuxt-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="226" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#00dc82"/>
+    <path d="M 24 31 L 28 21 L 32 31 Z" fill="#002244"/>
+    <text x="42" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Composable UI Engine</text>
+    <text x="42" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">125+ Accessible UI Components</text>
+
+    <!-- Component Category 1 -->
+    <g transform="translate(12, 50)">
+      <rect width="226" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#67e8f9">📦 UI.NUXT.COM SYSTEM</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• UButton, UInput, UModal, USelectMenu</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• UTable, UCard, UDropdownMenu, UToast</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">WCAG 2.1 AA • BC Gov Tailwind Palette</text>
+    </g>
+
+    <!-- Component Category 2 -->
+    <g transform="translate(12, 120)">
+      <rect width="226" height="74" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#fde047">🏢 LARGER BUSINESS WIDGETS</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• &lt;ConnectAddress /&gt; (Canada Post)</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• &lt;ConnectFeeWidget /&gt; (Realtime Pay)</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ffffff">• &lt;ConnectAccountSelector /&gt; (Teams)</text>
+    </g>
+
+    <!-- Component Category 3: Developer DX -->
+    <g transform="translate(12, 200)">
+      <rect width="226" height="66" rx="6" fill="#064e3b"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#6ee7b7">⚡ ZERO BOILERPLATE DX</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#d1fae5">• Auto-imported composables &amp; stores</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#d1fae5">• Shared i18n (en-CA / fr-CA) locales</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Single-line dependency updates</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Engine -> Deployed Products -->
+  <path d="M 610 185 L 655 185" class="edge-solid"/>
+  <g transform="translate(615, 165)">
+    <rect class="tag-bg" width="46" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="21" y="4" text-anchor="middle">powers</text>
+  </g>
+
+  <!-- Right Column: Ministry Applications & Platform Products (Active Adopters) -->
+  <g transform="translate(660, 48)">
+    <rect class="node-card" width="190" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#fef3c7"/>
+    <!-- App layout icon -->
+    <path d="M 18 16 L 34 16 L 34 32 L 18 32 Z M 18 22 L 34 22 M 24 22 L 24 32" stroke="#b45309" stroke-width="1.6" fill="none"/>
+    <text class="node-title" x="46" y="22">Adopted Services</text>
+    <text class="node-sub" x="46" y="34">Built on Connect-Nuxt</text>
+
+    <line x1="12" y1="44" x2="178" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- App 1: Business Registries (BPC) -->
+    <g transform="translate(10, 54)">
+      <rect width="170" height="58" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">🏢 Business Registries</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Incorporations, Filings, Name Req</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">Extends Base + Auth + Pay + Forms</text>
+    </g>
+
+    <!-- App 2: Short-Term Rental Registry (STRR) -->
+    <g transform="translate(10, 122)">
+      <rect width="170" height="58" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">🏡 STRR Registry</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Host Registration &amp; Address Lookup</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">Extends Base + Auth + Forms</text>
+    </g>
+
+    <!-- App 3: Personal Property Registry (PPR) -->
+    <g transform="translate(10, 190)">
+      <rect width="170" height="58" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">📜 Personal Property (PPR)</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Lien Registrations, Search &amp; Pay</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#15803d">Extends Base + Auth + Pay</text>
+    </g>
+  </g>
+</svg>

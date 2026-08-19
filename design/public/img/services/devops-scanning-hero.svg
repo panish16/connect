@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="scan-bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="scan-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.09" />
+    </filter>
+
+    <style>
+      .sc-card { rx: 10; fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.06)); }
+      .sc-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .sc-sub { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-solid { stroke: #0284c7; stroke-width: 2; }
+      .tag-bg { rx: 4; fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1; }
+      .edge-tag { font-family: system-ui, -apple-system, sans-serif; font-size: 9.5px; font-weight: 600; fill: #1e40af; }
+      .sc-pill { rx: 6; fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+
+      @media (prefers-color-scheme: dark) {
+        .sc-card { fill: #1e293b; stroke: #334155; }
+        .sc-title { fill: #f8fafc; }
+        .sc-sub { fill: #94a3b8; }
+        .edge-solid { stroke: #38bdf8; }
+        .tag-bg { fill: #1e3a8a; stroke: #3b82f6; }
+        .edge-tag { fill: #bfdbfe; }
+        .sc-pill { fill: #0f172a; stroke: #334155; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="880" height="340" rx="16" fill="url(#scan-bg-gradient)"/>
+  <rect width="878" height="338" x="1" y="1" rx="15" stroke="#cbd5e1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Top Banner Pill -->
+  <g transform="translate(28, 14)">
+    <rect width="530" height="26" rx="13" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="15" cy="13" r="5" fill="#e11d48"/>
+    <text x="26" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#003366">CONTINUOUS SECURITY SCANNING: DOCKER IMAGES &amp; MULTI-LANGUAGE LIBRARIES</text>
+  </g>
+
+  <!-- Left Column: Multi-Language Package Scanning -->
+  <g transform="translate(30, 48)">
+    <rect class="sc-card" width="240" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#eff6ff"/>
+    <!-- Code library icon -->
+    <path d="M 18 18 L 24 24 L 18 30 M 30 18 L 24 24 L 30 30" stroke="#2563eb" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="sc-title" x="46" y="22">Library Scanning</text>
+    <text class="sc-sub" x="46" y="34">Dependencies &amp; Lockfiles</text>
+
+    <line x1="12" y1="44" x2="228" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Lang 1: JS / TS -->
+    <g transform="translate(10, 50)">
+      <rect class="sc-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#f59e0b"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#b45309">JS / TypeScript (pnpm &amp; npm)</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• pnpm audit &amp; npm lockfile check</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• Transitive vulnerability analysis</text>
+    </g>
+
+    <!-- Lang 2: Python -->
+    <g transform="translate(10, 108)">
+      <rect class="sc-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#0284c7"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#0369a1">Python (pip / poetry / pipfile)</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• pip-audit &amp; PyPI safety scanner</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• OSV database vulnerability match</text>
+    </g>
+
+    <!-- Lang 3: Go & Rust -->
+    <g transform="translate(10, 166)">
+      <rect class="sc-pill" width="220" height="52"/>
+      <rect x="8" y="8" width="6" height="36" rx="3" fill="#10b981"/>
+      <text x="20" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#047857">Go &amp; Rust (go.mod &amp; Cargo)</text>
+      <text x="20" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• govulncheck official Go DB</text>
+      <text x="20" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#64748b">• cargo-audit RustSec advisories</text>
+    </g>
+
+    <!-- Lang 4: Summary Tag -->
+    <g transform="translate(10, 224)">
+      <rect width="220" height="30" rx="6" fill="#f1f5f9"/>
+      <text x="12" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#334155">🛡️ Continuous CVE &amp; License Screening</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1: Packages -> Artifact Registry Scanner -->
+  <path d="M 270 185 L 315 185" class="edge-solid"/>
+  <g transform="translate(272, 165)">
+    <rect class="tag-bg" width="42" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="19" y="4" text-anchor="middle">inspect</text>
+  </g>
+
+  <!-- Center Card: Artifact Registry Scanner Engine -->
+  <g transform="translate(315, 48)">
+    <rect width="270" height="278" rx="12" fill="#003366" filter="url(#scan-shadow)"/>
+    
+    <!-- Header Box -->
+    <rect x="12" y="10" width="246" height="34" rx="6" fill="#002244"/>
+    <circle cx="28" cy="27" r="8" fill="#e11d48"/>
+    <!-- Shield / Radar icon -->
+    <path d="M 28 20 L 34 23 L 34 28 C 34 32 28 35 28 35 C 28 35 22 32 22 28 L 22 23 Z" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <text x="44" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Artifact Analysis Engine</text>
+    <text x="44" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#93c5fd">Supply Chain Security (Montreal)</text>
+
+    <!-- Block 1: Container Image Scanning -->
+    <g transform="translate(12, 50)">
+      <rect width="246" height="66" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#67e8f9">🐳 ARTIFACT ANALYSIS CVE SCAN</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Scans OS packages &amp; Distroless layers</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Automatic on-push &amp; continuous rescans</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#93c5fd">NVD &amp; vendor advisory database syncing</text>
+    </g>
+
+    <!-- Block 2: SBOM Generation -->
+    <g transform="translate(12, 122)">
+      <rect width="246" height="64" rx="6" fill="#0f3c6d"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#fde047">📜 SUPPLY CHAIN SECURITY &amp; SBOM</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Generates SPDX &amp; CycloneDX manifests</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Full supply chain dependency provenance</text>
+      <text x="10" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#86efac">Immutable artifact metadata</text>
+    </g>
+
+    <!-- Block 3: CVSS Scoring & Policy Engine -->
+    <g transform="translate(12, 192)">
+      <rect width="246" height="74" rx="6" fill="#0369a1"/>
+      <text x="10" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#e0f2fe">⚖️ CVSS SCORING &amp; THRESHOLDS</text>
+      <text x="10" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Critical &amp; High severity classification</text>
+      <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#ffffff">• Fix availability detection</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#fde047">Automated CI break on Critical CVEs</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2: Scanner -> Enforcement & Posture -->
+  <path d="M 585 185 L 635 185" class="edge-solid"/>
+  <g transform="translate(588, 165)">
+    <rect class="tag-bg" width="44" height="18" x="-2" y="-9"/>
+    <text class="edge-tag" x="20" y="4" text-anchor="middle">enforce</text>
+  </g>
+
+  <!-- Right Column: Security Posture & Enforcement -->
+  <g transform="translate(635, 48)">
+    <rect class="sc-card" width="215" height="278"/>
+    <rect x="12" y="10" width="28" height="28" rx="6" fill="#fef2f2"/>
+    <!-- Lock / Alert icon -->
+    <path d="M 20 20 L 20 26 M 26 20 L 26 26 M 16 20 L 30 20 L 30 30 L 16 30 Z M 19 20 L 19 16 C 19 14 21 12 23 12 C 25 12 27 14 27 16 L 27 20" stroke="#dc2626" stroke-width="1.6" fill="none"/>
+    <text class="sc-title" x="46" y="22">Ongoing Posture</text>
+    <text class="sc-sub" x="46" y="34">Partner Protection</text>
+
+    <line x1="12" y1="44" x2="203" y2="44" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Posture Card 1: CI/CD Quality Gates -->
+    <g transform="translate(10, 52)">
+      <rect width="195" height="96" rx="8" fill="#fef2f2" stroke="#fee2e2" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#991b1b">🚫 Deployment Gates</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#7f1d1d">• Blocks vulnerable PR merges</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#7f1d1d">• Prevents vulnerable pushes to Prod</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#7f1d1d">• Patch upgrade recommendations</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" fill="#b91c1c">Zero unpatched Critical CVEs</text>
+    </g>
+
+    <!-- Posture Card 2: Continuous Re-scanning -->
+    <g transform="translate(10, 156)">
+      <rect width="195" height="110" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1.2"/>
+      <text x="10" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">🔄 Continuous Rescans</text>
+      <text x="10" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Daily scans on deployed images</text>
+      <text x="10" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Detects newly disclosed CVEs</text>
+      <text x="10" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" fill="#14532d">• Cloud Logging &amp; Slack alerts</text>
+      <text x="10" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#15803d">Proactive Ministry Posture</text>
+      <text x="10" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#166534">SRE audit compliance ready</text>
+    </g>
+  </g>
+</svg>

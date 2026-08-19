@@ -9,7 +9,10 @@ export default defineNuxtConfig({
     '@nuxt/a11y',
     '@nuxt/eslint'
   ],
-  css: ['~/assets/css/main.css'],
+  css: [
+    'katex/dist/katex.min.css',
+    '~/assets/css/main.css'
+  ],
   devtools: { enabled: true },
   compatibilityDate: '2026-05-01',
   app: {
@@ -19,20 +22,46 @@ export default defineNuxtConfig({
       }
     }
   },
-  studio: {
-    repository: {
-      provider: 'github', 
-      owner: 'daxiom',
-      repo: 'connect',
-      branch: 'main'
+  ...(isStudioEnabled ? {
+    studio: {
+      repository: {
+        provider: 'github', 
+        owner: 'daxiom',
+        repo: 'connect',
+        branch: 'main'
+      }
     }
-  },
+  } : {}),
   extends: [
     '@sbc-connect/nuxt-pay'
   ],
-  content: {
-    // Content configuration
+  mdc: {
+    remarkPlugins: {
+      'remark-math': {}
+    },
+    rehypePlugins: {
+      'rehype-katex': {}
+    }
   },
+  content: {
+    build: {
+      markdown: {
+        remarkPlugins: {
+          'remark-math': {}
+        },
+        rehypePlugins: {
+          'rehype-katex': {}
+        },
+        highlight: {
+          theme: {
+            default: 'github-dark',
+            dark: 'github-dark'
+          }
+        }
+      }
+    }
+  },
+
   nitro: {
     preset: 'node_server',
     externals: {
@@ -47,11 +76,6 @@ export default defineNuxtConfig({
         driver: 'fs',
         base: '/tmp/db'
       }
-    }
-  },
-  auth: {
-    session: {
-      name: '__session'
     }
   },
   runtimeConfig: {
@@ -86,6 +110,8 @@ export default defineNuxtConfig({
     }
   },
   icon: {
-    clientBundle: { scan: false }
+    clientBundle: {
+      scan: true
+    }
   }
 })
