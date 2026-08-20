@@ -1,3 +1,6 @@
+# Git hooks tooling
+.gitleaks-bin/
+
 # Logs
 logs
 *.log

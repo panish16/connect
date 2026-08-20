@@ -117,6 +117,12 @@ make lint
 
 or checking the local projects listed linting commands.
 
+#### **Pre-Commit Hooks**
+
+This repo uses [Lefthook](https://github.com/evilmartians/lefthook) to run lint, typecheck and [gitleaks](https://github.com/gitleaks/gitleaks) secret scanning automatically before each commit. Hooks are installed for you the first time you run `pnpm install` (no manual setup) - `pnpm install` also downloads the official gitleaks binary directly from its GitHub releases, verified against the release's published checksum.
+
+If a commit is blocked by a false-positive secret match, add an allowlist entry to `.gitleaks.toml` rather than bypassing the hook. `git commit --no-verify` skips these checks and should only be used in exceptional cases, since CI runs the same scan as a backstop.
+
 #### **Commits**
 
 Commit messages must adhere to the [Conventional Commits](https://www.conventionalcommits.org/) specification. This is a hard requirement enforced by our CI pipelines for automated changelog generation and semantic versioning.

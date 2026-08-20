@@ -4,6 +4,9 @@
 pre-commit:
   parallel: true
   commands:
+    secret-scan:
+      tags: security
+      run: node scripts/run-gitleaks.mjs
     lint:
       glob: "*.{js,ts,jsx,tsx,vue}"
       run: pnpm run lint
