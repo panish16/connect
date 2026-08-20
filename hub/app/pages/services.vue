@@ -181,7 +181,7 @@ const filteredServices = computed(() => {
 // Group Services by Category in Display Order
 const groupedServices = computed(() => {
   const groups: Record<string, ServiceItem[]> = {}
-  const categoryOrder = ['Public Applications', 'Government & BPS Services']
+  const categoryOrder = ['Government & BPS Services', 'Public Applications']
 
   filteredServices.value.forEach((service) => {
     const cat = service.category || t('serviceCatalog.categories.otherServices')
