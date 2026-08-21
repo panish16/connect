@@ -17,6 +17,7 @@
       "@sbc-connect/nuxt-pay",
       "better-sqlite3",
       "esbuild",
+      "lefthook",
       "sharp",
       "vue-demi"
     ]
